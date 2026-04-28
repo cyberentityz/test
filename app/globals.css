@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Share+Tech+Mono&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+
+
+:root {
+  --black: #020408;
+  --dark: #060c12;
+  --card: #0a1520;
+  --red: #e81c1c;
+  --neon-red: #ff2020;
+  --orange: #ff6a00;
+  --neon-orange: #ff7b00;
+  --glass: rgba(255,255,255,0.04);
+  --glass-border: rgba(255,50,50,0.15);
+  --text: #d0dbe8;
+  --text-dim: #6b8299;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--black);
+  color: var(--text);
+  font-family: 'Rajdhani', sans-serif;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #000; }
+::-webkit-scrollbar-thumb { background: var(--red); border-radius: 2px; }
+
+.font-orbitron { font-family: 'Orbitron', monospace !important; }
+.font-mono-tech { font-family: 'Share Tech Mono', monospace !important; }
+
+.glow-red { text-shadow: 0 0 20px #ff2020, 0 0 40px rgba(255,32,32,0.3); }
+.glow-orange { text-shadow: 0 0 20px #ff7b00; }
+
+.clip-cyber { clip-path: polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%); }
+.clip-cyber-sm { clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%); }
+.clip-card { clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 16px 100%, 0 calc(100% - 16px)); }
+.clip-card-br { clip-path: polygon(0 0, 100% 0, 100% calc(100% - 16px), calc(100% - 16px) 100%, 0 100%); }
+
+.scanlines {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.05) 2px, rgba(0,0,0,0.05) 4px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.glitch { position: relative; }
+.glitch::before, .glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+}
+.glitch::before {
+  color: #ff2020;
+  animation: glitch1 3s infinite;
+  clip-path: polygon(0 20%, 100% 20%, 100% 40%, 0 40%);
+}
+.glitch::after {
+  color: #ff6a00;
+  animation: glitch2 3s infinite;
+  clip-path: polygon(0 65%, 100% 65%, 100% 75%, 0 75%);
+}
+
+.section-divider {
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(to right, #e81c1c, #ff6a00);
+  margin: 20px 0 50px;
+}
+
+@keyframes glitch1 {
+  0%, 100% { clip-path: polygon(0 20%, 100% 20%, 100% 40%, 0 40%); transform: translate(-2px, 0); }
+  50% { clip-path: polygon(0 35%, 100% 35%, 100% 50%, 0 50%); transform: translate(2px, 0); }
+}
+@keyframes glitch2 {
+  0%, 100% { clip-path: polygon(0 65%, 100% 65%, 100% 75%, 0 75%); transform: translate(2px, 0); }
+  50% { clip-path: polygon(0 50%, 100% 50%, 100% 60%, 0 60%); transform: translate(-2px, 0); }
+}
+@keyframes rotateSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes bounce-scroll {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-10px); }
+}
+
+.rotate-slow { animation: rotateSlow 8s linear infinite; }
+.rotate-slow-rev { animation: rotateSlow 5s linear infinite reverse; }
+.bounce-scroll { animation: bounce-scroll 2s infinite; }
+
+.hoverBackground:hover{
+  filter: drop-shadow(0 0 20px #ff2020) drop-shadow(0 0 50px rgba(255,32,32,0.4));
+}
