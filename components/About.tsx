@@ -115,22 +115,24 @@ export default function About() {
       </div>
 
       {/* IMAGE */}
-      <div
-        style={{
-          width: "270px",
-          height: "220px",
-          overflow: "hidden",
-          borderRadius: "16px",
-        }}
-      >
-        <Image
-          src={item.img}
-          alt={item.label}
-          width={270}
-          height={220}
-          className="hoverBackground object-cover w-full h-full"
-        />
-      </div>
+<div
+  className="hoverBackground"
+  style={{
+    width: "270px",
+    height: "220px",
+    overflow: "hidden",
+    borderRadius: "16px",
+    position: "relative",
+  }}
+>
+  <Image
+    src={item.img}
+    alt={item.label}
+    width={270}
+    height={220}
+    className="object-cover w-full h-full"
+  />
+</div>
     </div>
   ))}
 </div>
