@@ -72,22 +72,30 @@ export default function About() {
         </Reveal>
       </div>
 
-     <div className="grid grid-cols-1 gap-5 sm:grid-cols-4 mt-10">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10 justify-items-center">
   {[
     { label: "Ethical Hacking Society", img: "/Ethical_Hacking.jpeg" },
     { label: "Corporate Security", img: "/Corporate_Security.jpeg" },
     { label: "College & School Programs", img: "/College_School_programs.jpeg" },
     { label: "Global Certification Guidance", img: "/Global_Certification.jpeg" },
   ].map((item) => (
-    <div key={item.label} className="flex flex-col items-center gap-3">
+    <div
+      key={item.label}
+      className="flex flex-col items-center"
+    >
+      {/* HEADING */}
       <div
-        className="font-mono-tech w-full"
+        className="font-mono-tech mb-3 flex items-center justify-center text-center"
         style={{
+          width: "270px",
+          height: "90px",
           background: "rgba(255,255,255,0.04)",
           border: "1px solid rgba(255,50,50,0.15)",
           borderLeft: "3px solid #e81c1c",
-          padding: "18px", fontSize: "0.78rem",
-          color: "#6b8299", letterSpacing: 0.5,
+          padding: "18px",
+          fontSize: "0.78rem",
+          color: "#6b8299",
+          letterSpacing: 0.5,
           transition: "all 0.3s",
         }}
         onMouseEnter={(e) => {
@@ -105,13 +113,24 @@ export default function About() {
       >
         {item.label}
       </div>
-      <Image
-        src={item.img}
-        alt={item.label}
-        width={270}
-        height={270}
-        className="hoverBackground w-full"
-      />
+
+      {/* IMAGE */}
+      <div
+        style={{
+          width: "270px",
+          height: "220px",
+          overflow: "hidden",
+          borderRadius: "16px",
+        }}
+      >
+        <Image
+          src={item.img}
+          alt={item.label}
+          width={270}
+          height={220}
+          className="hoverBackground object-cover w-full h-full"
+        />
+      </div>
     </div>
   ))}
 </div>
