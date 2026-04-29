@@ -1,37 +1,7 @@
 "use client";
-import { useState } from "react";
 import Reveal from "./Reveal";
 
 export default function Contact() {
-  const [submitted, setSubmitted] = useState(false);
-
-  function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 3000);
-  }
-
-  const inputStyle = {
-    background: "rgba(255,255,255,0.03)",
-    border: "1px solid rgba(255,255,255,0.1)",
-    color: "#d0dbe8",
-    fontFamily: "'Rajdhani', sans-serif",
-    fontSize: "0.95rem",
-    padding: "12px 16px",
-    outline: "none",
-    width: "100%",
-    transition: "border-color 0.3s, box-shadow 0.3s",
-  };
-
-  const labelStyle = {
-    fontFamily: "'Share Tech Mono', monospace",
-    fontSize: "0.7rem",
-    color: "#ff6a00",
-    letterSpacing: 2,
-    textTransform: "uppercase" as const,
-    marginBottom: 8,
-    display: "block",
-  };
 
   return (
     <section id="contact" style={{ padding: "100px 5%", background: "#060c12" }}>
@@ -87,7 +57,7 @@ export default function Contact() {
 
         {/* Form */}
         <Reveal direction="right">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.8014043032463!2d80.2497245!3d13.0483096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526743486550eb%3A0x4b0433d47aa9c053!2sCYBERENTITYZ!5e0!3m2!1sen!2sin!4v1777274867805!5m2!1sen!2sin" width="600" height="450" style={{border:"0"}}  loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.8014043032463!2d80.2497245!3d13.0483096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526743486550eb%3A0x4b0433d47aa9c053!2sCYBERENTITYZ!5e0!3m2!1sen!2sin!4v1777274867805!5m2!1sen!2sin" className="border-0 w-85 h-70 sm:w-150 sm:h-112.5" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
         </Reveal>
       </div>
       <style>{`

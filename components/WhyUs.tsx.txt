@@ -26,10 +26,10 @@ export default function WhyUs() {
               <div
                 key={r.num}
                 data-hover
-                style={{ background: "#0a1520", border: "1px solid rgba(255,50,50,0.15)", padding: "36px 28px", position: "relative", transition: "all 0.4s", display: "grid", gridTemplateColumns:"auto auto", columnGap:"10px" }}
+                style={{ background: "#0a1520", border: "1px solid rgba(255,50,50,0.15)", padding: "36px 28px", position: "relative", transition: "all 0.4s", display: "grid", gridTemplateColumns: "auto auto", columnGap: "10px" }}
                 onMouseEnter={(e) => { const el = e.currentTarget; el.style.borderColor = "#e81c1c"; el.style.boxShadow = "0 0 40px rgba(232,28,28,0.15)"; el.style.transform = "translateY(-6px)"; }}
                 onMouseLeave={(e) => { const el = e.currentTarget; el.style.borderColor = "rgba(255,50,50,0.15)"; el.style.boxShadow = "none"; el.style.transform = "none"; }}
-                className="hoverBackground"
+                className="hoverBackground why-grid"
               >
                 <div>
                   <h3 className="font-orbitron" style={{ fontSize: "0.95rem", fontWeight: 700, color: "#fff", letterSpacing: 1, marginBottom: 14, textTransform: "uppercase" }}>{r.title}</h3>
