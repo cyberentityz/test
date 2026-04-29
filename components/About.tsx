@@ -72,41 +72,49 @@ export default function About() {
         </Reveal>
       </div>
 
-      <div className="grid grid-cols-1 gap-5 sm:grid-cols-4">
-        {highlights.map((h) => (
-          <div
-            key={h}
-            className="font-mono-tech"
-            style={{
-              background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,50,50,0.15)",
-              borderLeft: "3px solid #e81c1c", padding: "18px", fontSize: "0.78rem",
-              color: "#6b8299", letterSpacing: 0.5, transition: "all 0.3s",
-            }}
-            onMouseEnter={(e) => {
-              const el = e.currentTarget;
-              el.style.borderLeftColor = "#ff6a00";
-              el.style.background = "rgba(255,106,0,0.05)";
-              el.style.color = "#e81c1c";
-            }}
-            onMouseLeave={(e) => {
-              const el = e.currentTarget;
-              el.style.borderLeftColor = "#e81c1c";
-              el.style.background = "rgba(255,255,255,0.04)";
-              el.style.color = "#6b8299";
-            }}
-          >
-            {h}
-          </div>
-        ))}
+     <div className="grid grid-cols-1 gap-5 sm:grid-cols-4 mt-10">
+  {[
+    { label: "Ethical Hacking Society", img: "/Ethical_Hacking.jpeg" },
+    { label: "Corporate Security", img: "/Corporate_Security.jpeg" },
+    { label: "College & School Programs", img: "/College_School_programs.jpeg" },
+    { label: "Global Certification Guidance", img: "/Global_Certification.jpeg" },
+  ].map((item) => (
+    <div key={item.label} className="flex flex-col items-center gap-3">
+      <div
+        className="font-mono-tech w-full"
+        style={{
+          background: "rgba(255,255,255,0.04)",
+          border: "1px solid rgba(255,50,50,0.15)",
+          borderLeft: "3px solid #e81c1c",
+          padding: "18px", fontSize: "0.78rem",
+          color: "#6b8299", letterSpacing: 0.5,
+          transition: "all 0.3s",
+        }}
+        onMouseEnter={(e) => {
+          const el = e.currentTarget;
+          el.style.borderLeftColor = "#ff6a00";
+          el.style.background = "rgba(255,106,0,0.05)";
+          el.style.color = "#e81c1c";
+        }}
+        onMouseLeave={(e) => {
+          const el = e.currentTarget;
+          el.style.borderLeftColor = "#e81c1c";
+          el.style.background = "rgba(255,255,255,0.04)";
+          el.style.color = "#6b8299";
+        }}
+      >
+        {item.label}
       </div>
-
-      <div className="flex flex-col sm:flex-row mt-5">
-        <Image src="/Ethical_Hacking.jpeg" alt="About1" width={270} height={270} className="hoverBackground" />
-        <Image src="/Corporate_Security.jpeg" alt="About1" width={270} height={270} style={{ marginLeft: "20px" }} className="hoverBackground" />
-        <Image src="/College_School_programs.jpeg" alt="About1" width={270} height={270} style={{ marginLeft: "20px" }} className="hoverBackground" />
-        <Image src="/Global_Certification.jpeg" alt="About1" width={270} height={270} style={{ marginLeft: "20px" }} className="hoverBackground" />
-      </div>
-
+      <Image
+        src={item.img}
+        alt={item.label}
+        width={270}
+        height={270}
+        className="hoverBackground w-full"
+      />
+    </div>
+  ))}
+</div>
       <style>{`
         @media (max-width: 768px) {
           .about-grid { grid-template-columns: 1fr !important; }
