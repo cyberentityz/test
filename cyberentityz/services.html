@@ -1,0 +1,1509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services &amp; Practice Areas — CYBERENTITYZ™</title>
+  <meta name="description" content="Explore CYBERENTITYZ enterprise cybersecurity services, offensive penetration testing, corporate governance, and managed defense solutions.">
+  <link rel="icon" type="image/jpeg" href="images/logo.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,400&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Dedicated Services Page Styling matching nordconsulting.framer.website/services */
+    .services-page-body {
+      background: #fbfbfa;
+      color: #1c1c1c;
+      min-height: 100vh;
+    }
+
+    .services-hero-container {
+      padding: 1.5rem 0 3.5rem;
+    }
+
+    .services-dark-card {
+      background: #18181b;
+      color: #ffffff;
+      border-radius: 20px;
+      padding: 4.5rem 4rem;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+    }
+
+    .services-dark-card::after {
+      content: '';
+      position: absolute;
+      top: -20%;
+      right: -10%;
+      width: 450px;
+      height: 450px;
+      background: radial-gradient(circle, rgba(255, 90, 31, 0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .services-kicker-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 3rem;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 1.2px;
+      color: #8c8c98;
+      text-transform: uppercase;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .services-display-title {
+      font-family: var(--font-sans);
+      font-size: clamp(2.8rem, 5.5vw, 5.2rem);
+      font-weight: 500;
+      line-height: 1.05;
+      letter-spacing: -2.5px;
+      color: #ffffff;
+      margin: 0 0 1.5rem;
+    }
+
+    .services-display-title .italic-serif-orange {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-style: italic;
+      font-weight: 400;
+      color: var(--color-orange);
+      display: block;
+      letter-spacing: -0.5px;
+    }
+
+    .services-lead-sub {
+      font-family: var(--font-sans);
+      font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+      line-height: 1.6;
+      color: #a0a0ab;
+      max-width: 680px;
+      margin: 0 0 2.5rem;
+    }
+
+    /* Practices Overview List (Matching Screenshot: nordconsulting.framer.website/services) */
+    .practices-list-wrap {
+      padding: 3rem 0 6rem;
+    }
+
+    .practice-row-item {
+      display: grid;
+      grid-template-columns: 80px 1.4fr 1.6fr 60px;
+      gap: 2.5rem;
+      align-items: center;
+      padding: 3.5rem 0;
+      border-top: 1px solid rgba(0, 0, 0, 0.08);
+      text-decoration: none;
+      color: inherit;
+      transition: background 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s ease;
+      position: relative;
+    }
+
+    .practice-row-item:last-child {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    .practice-row-item:hover {
+      background: rgba(224, 90, 0, 0.02);
+    }
+
+    .p-num-orange {
+      font-family: var(--font-mono);
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--red);
+      align-self: flex-start;
+      padding-top: 0.6rem;
+    }
+
+    .p-title-h2 {
+      font-family: var(--font-sans);
+      font-size: clamp(2.3rem, 4.2vw, 3.6rem);
+      font-weight: 500;
+      letter-spacing: -1.2px;
+      line-height: 1.12;
+      color: #18181b;
+      margin: 0;
+      transition: color 0.25s ease;
+    }
+
+    .practice-row-item:hover .p-title-h2 {
+      color: var(--red);
+    }
+
+    .p-right-col {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .p-desc-p {
+      font-family: var(--font-sans);
+      font-size: 15px;
+      line-height: 1.65;
+      color: #52525b;
+      margin: 0 0 0.85rem;
+    }
+
+    .p-explore-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--red);
+      text-decoration: none;
+      transition: gap 0.2s ease;
+    }
+
+    .practice-row-item:hover .p-explore-link {
+      gap: 0.65rem;
+    }
+
+    .p-thumb-preview {
+      width: 150px;
+      height: 90px;
+      border-radius: 12px;
+      object-fit: cover;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      flex-shrink: 0;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+    }
+
+    .p-circle-arrow {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 1px solid rgba(0, 0, 0, 0.12);
+      background: #ffffff;
+      color: #18181b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      font-weight: 700;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      justify-self: end;
+      flex-shrink: 0;
+    }
+
+    .practice-row-item:hover .p-circle-arrow,
+    .practice-row-item.active .p-circle-arrow {
+      background: var(--red);
+      color: #ffffff;
+      border-color: var(--red);
+      transform: rotate(45deg);
+      box-shadow: 0 6px 18px rgba(224, 90, 0, 0.35);
+    }
+/* Full 80 Services Catalogue Grid */
+    .catalogue-section {
+      padding: 6rem 0 8rem;
+    }
+
+    .catalogue-header-row {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 3.5rem;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .catalogue-controls {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      width: 100%;
+      max-width: 640px;
+    }
+
+    .catalogue-search-input {
+      width: 100%;
+      padding: 1rem 1.4rem;
+      border-radius: 9999px;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      background: #ffffff;
+      font-family: var(--font-sans);
+      font-size: 15px;
+      color: #1c1c1c;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+      transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .catalogue-search-input:focus {
+      outline: none;
+      border-color: var(--color-orange);
+      box-shadow: 0 0 0 3px rgba(255, 90, 31, 0.15);
+    }
+
+    .catalogue-domain-pills {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .domain-filter-btn {
+      background: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.12);
+      color: #555562;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 500;
+      padding: 0.55rem 1.25rem;
+      border-radius: 9999px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .domain-filter-btn.active,
+    .domain-filter-btn:hover {
+      background: #1c1c1c;
+      color: #ffffff;
+      border-color: #1c1c1c;
+    }
+
+    .services-grid-layout {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .service-catalogue-card {
+      background: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: 16px;
+      padding: 2.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.3s var(--ease-nord), box-shadow 0.3s var(--ease-nord), border-color 0.3s var(--ease-nord);
+    }
+
+    .service-catalogue-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(255, 90, 31, 0.4);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
+    }
+
+    .card-meta-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.25rem;
+    }
+
+    .card-category-mono {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--color-orange);
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    .card-domain-tag {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      padding: 0.25rem 0.65rem;
+      border-radius: 9999px;
+      background: #f4f3ee;
+      color: #72727e;
+      text-transform: uppercase;
+    }
+
+    .card-service-title {
+      font-family: var(--font-sans);
+      font-size: 1.45rem;
+      font-weight: 600;
+      color: #1c1c1c;
+      margin: 0 0 0.65rem;
+      letter-spacing: -0.4px;
+      transition: color 0.2s ease;
+    }
+
+    .service-catalogue-card:hover .card-service-title {
+      color: var(--color-orange);
+    }
+
+    .card-service-desc {
+      font-family: var(--font-sans);
+      font-size: 14px;
+      line-height: 1.6;
+      color: #555562;
+      margin: 0 0 1.75rem;
+      flex-grow: 1;
+    }
+
+    .card-footer-cta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 1.25rem;
+      border-top: 1px solid rgba(0, 0, 0, 0.06);
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 600;
+      color: #1c1c1c;
+    }
+
+    .service-catalogue-card:hover .card-footer-cta {
+      color: var(--color-orange);
+    }
+
+    /* Single Service Detail View Container */
+    #singleServiceView {
+      display: none;
+    }
+
+    .detail-body-container {
+      padding: 4rem 0 8rem;
+    }
+
+    .detail-columns-grid {
+      display: grid;
+      grid-template-columns: 1.45fr 0.92fr;
+      gap: 4rem;
+      align-items: stretch !important;
+      position: relative;
+    }
+
+    .detail-main-content {
+      min-width: 0;
+    }
+
+    .sticky-consult-col {
+      position: relative;
+      height: 100%;
+    }
+
+    .threat-tag-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      margin: 1.5rem 0 3rem;
+    }
+
+    .threat-pill {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      background: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      padding: 0.45rem 0.95rem;
+      border-radius: 9999px;
+      color: #2a2a32;
+    }
+
+    .methodology-step-box {
+      background: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: 12px;
+      padding: 1.75rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .m-step-kicker {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--color-orange);
+      margin-bottom: 0.35rem;
+      text-transform: uppercase;
+    }
+
+    .m-step-title {
+      font-family: var(--font-sans);
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #1c1c1c;
+      margin: 0 0 0.5rem;
+    }
+
+    .m-step-desc {
+      font-family: var(--font-sans);
+      font-size: 14px;
+      line-height: 1.6;
+      color: #555562;
+      margin: 0;
+    }
+
+    .sticky-consult-card {
+      background: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 18px;
+      padding: 2.75rem 2.25rem;
+      position: -webkit-sticky !important;
+      position: sticky !important;
+      top: 90px !important;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
+      align-self: start !important;
+      z-index: 20;
+    }
+
+    @media (max-width: 1024px) {
+      .practice-row-item {
+        grid-template-columns: 50px 1fr 40px;
+      }
+      .practice-row-item .p-desc-p {
+        grid-column: 2 / -1;
+      }
+      .services-grid-layout {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .detail-columns-grid {
+        grid-template-columns: 1fr;
+      }
+      .sticky-consult-card {
+        position: relative;
+        top: 0;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .services-dark-card {
+        padding: 2.75rem 1.75rem;
+      }
+      .practice-row-item {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+      .practice-row-item .p-circle-arrow {
+        justify-self: start;
+      }
+      .services-grid-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body class="services-page-body">
+
+  <!-- TOP ANNOUNCEMENT STRIP -->
+  <aside class="top-announcement-strip" id="topAnnouncementStrip">
+    <div class="container announcement-center-wrap">
+      <span class="announcement-text-center">Welcome to International Biggest Cybersecurity and Ethical Hacking Society</span>
+    </div>
+  </aside>
+
+  <!-- NAVBAR -->
+  <header class="site-header-mega" id="siteHeader">
+    <div class="container nav-inner-wrap">
+      
+      <!-- Brand Logo (Official CYBERENTITYZ Logo) -->
+      <a href="index.html#hero" class="brand-monogram-box">
+        <img src="images/logo.jpeg" alt="CYBERENTITYZ Logo" class="brand-monogram-logo">
+        <div class="brand-titles">
+          <span class="brand-primary-name">CYBERENTITYZ<span class="sup-tm">™</span></span>
+        </div>
+      </a>
+
+      <!-- Navigation Links with Mega-Menus (Order: Assurance, Compliance, MSSP, Services) -->
+      <nav class="mega-nav-list" id="megaNavList">
+        <a href="index.html#about" class="nav-simple-link">About</a>
+
+        <!-- 1. ASSURANCE MEGA-MENU -->
+        <div class="nav-dropdown-item has-megamenu">
+          <button class="nav-trigger-btn" aria-expanded="false" onclick="toggleNavDropdown(this, event)">
+            <span>Assurance</span>
+            <svg class="chevron-svg" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1l4 4 4-4" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+          <div class="megamenu-panel megamenu-wide">
+            <div class="megamenu-grid-3">
+              <div class="megamenu-col">
+                <div class="megamenu-col-badge">SECURITY TESTING (VAPT)</div>
+                <ul class="megamenu-links-list">
+                  <li><a href="services.html?service=web-application-vapt">Web Application VAPT</a></li>
+                  <li><a href="services.html?service=mobile-app-security">Mobile App Security</a></li>
+                  <li><a href="services.html?service=api-security-testing">API Security Testing</a></li>
+                  <li><a href="services.html?service=cloud-security-testing">Cloud Security Assessment</a></li>
+                  <li><a href="services.html?service=network-security-testing">Network Security Audit</a></li>
+                  <li><a href="services.html?service=iot-penetration-testing">IoT Penetration Testing</a></li>
+                  <li><a href="services.html?service=ot-security-testing">OT / SCADA Security</a></li>
+                  <li><a href="services.html?service=database-penetration-testing">Database Penetration</a></li>
+                  <li><a href="services.html?service=wireless-security-testing">Wireless Security</a></li>
+                  <li><a href="services.html?service=crest-vapt">CREST VAPT</a></li>
+                </ul>
+              </div>
+              <div class="megamenu-col">
+                <div class="megamenu-col-badge">ADVANCED ASSESSMENT</div>
+                <ul class="megamenu-links-list">
+                  <li><a href="services.html?service=red-team-operations">Red Team Operations</a></li>
+                  <li><a href="services.html?service=ai-llm-security-testing">AI / LLM Security Audit</a></li>
+                  <li><a href="services.html?service=digital-forensics-incident-response">Digital Forensics</a></li>
+                  <li><a href="services.html?service=cyber-intelligence">Cyber Intelligence</a></li>
+                  <li><a href="services.html?service=secure-code-review">Secure Code Review</a></li>
+                  <li><a href="services.html?service=devsecops">DevSecOps</a></li>
+                  <li><a href="services.html?service=hardware-security">Hardware Security</a></li>
+                  <li><a href="services.html?service=thick-client-security">Thick Client Security</a></li>
+                  <li><a href="services.html?service=host-level-security">Host Level Security</a></li>
+                  <li><a href="services.html?service=automotive-vapt">Automotive VAPT</a></li>
+                  <li><a href="services.html?service=telecom-vapt">Telecom VAPT</a></li>
+                </ul>
+              </div>
+              <div class="megamenu-col">
+                <div class="megamenu-col-badge">DATA &amp; PRIVACY</div>
+                <ul class="megamenu-links-list">
+                  <li><a href="services.html?service=data-security-audit">Data Security Audit</a></li>
+                  <li><a href="services.html?service=data-privacy-audit">Data Privacy Audit</a></li>
+                  <li><a href="services.html?service=data-masking-privacy">Data Masking &amp; Privacy</a></li>
+                  <li><a href="services.html?service=dspm">DSPM</a></li>
+                  <li><a href="services.html?service=data-breach-simulation">Data Breach Simulation</a></li>
+                  <li><a href="services.html?service=sbom-sca">SBOM &amp; SCA</a></li>
+                  <li><a href="services.html?service=website-security">Website Security</a></li>
+                  <li><a href="services.html" class="megamenu-see-all">All Assurance Services →</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="megamenu-bottom-bar">
+              <span class="megamenu-bottom-hint">End-to-end offensive security testing &amp; vulnerability management.</span>
+              <a href="services.html" class="megamenu-bottom-btn">All Assurance Services ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. COMPLIANCE MEGA-MENU -->
+        <div class="nav-dropdown-item has-megamenu">
+          <button class="nav-trigger-btn" aria-expanded="false" onclick="toggleNavDropdown(this, event)">
+            <span>Compliance</span>
+            <svg class="chevron-svg" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1l4 4 4-4" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+          <div class="megamenu-panel megamenu-wide">
+            <div class="megamenu-grid-3">
+              <div class="megamenu-col">
+                <div class="megamenu-col-badge">COMPLIANCE FRAMEWORKS</div>
+                <ul class="megamenu-links-list">
+                  <li><a href="services.html?service=iso-27001">ISO 27001:2022</a></li>
+                  <li><a href="services.html?service=soc-2-compliance">SOC 2</a></li>
+                  <li><a href="services.html?service=pci-dss">PCI-DSS</a></li>
+                  <li><a href="services.html?service=hipaa">HIPAA</a></li>
+                  <li><a href="services.html?service=gdpr">GDPR</a></li>
+                  <li><a href="services.html?service=dpdpa-compliance">DPDPA</a></li>
+                  <li><a href="services.html?service=nist-csf">NIST CSF</a></li>
+                  <li><a href="services.html?service=irdai">IRDAI</a></li>
+                  <li><a href="services.html?service=iso-22301">ISO 22301 (BCP)</a></li>
+                  <li><a href="services.html?service=iso-42001">ISO 42001 (AI)</a></li>
+                  <li><a href="services.html?service=iec-62443">IEC 62443 (OT)</a></li>
+                  <li><a href="services.html?service=iso-21434">ISO 21434 (Automotive)</a></li>
+                </ul>
+              </div>
+              <div class="megamenu-col">
+                <div class="megamenu-col-badge">GRC SERVICES</div>
+                <ul class="megamenu-links-list">
+                  <li><a href="services.html?service=grc-framework">GRC Framework</a></li>
+                  <li><a href="services.html?service=cyber-risk-assessment">Cyber Risk Assessment</a></li>
+                  <li><a href="services.html?service=third-party-risk-management">Third-Party Risk (TPRM)</a></li>
+                  <li><a href="services.html?service=data-privacy-compliance">Data Privacy Compliance</a></li>
+                  <li><a href="services.html?service=data-retention-policy">Data Retention Policy</a></li>
+                  <li><a href="services.html?service=national-security-compliance">National Security Compliance</a></li>
+                  <li><a href="services.html?service=cyber-insurance">Cybersecurity Insurance</a></li>
+                  <li><a href="services.html" class="megamenu-see-all">All Compliance →</a></li>
+                </ul>
+              </div>
+              <div class="megamenu-col">
+                <div class="megamenu-col-badge">CERTIFICATIONS</div>
+                <ul class="megamenu-links-list">
+                  <li><a href="index.html#certifications">CompTIA (Security+, CySA+)</a></li>
+                  <li><a href="index.html#certifications">EC-Council (CEH, CPENT, CHFI)</a></li>
+                  <li><a href="index.html#certifications">OffSec (OSCP, OSEP, OSDA)</a></li>
+                  <li><a href="index.html#certifications">ISC² (CISSP, CCSP)</a></li>
+                  <li><a href="index.html#certifications">ISACA (CISA, CISM)</a></li>
+                  <li><a href="index.html#certifications">Cisco CyberOps Associate</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="megamenu-bottom-bar">
+              <span class="megamenu-bottom-hint">Regulatory compliance, GRC frameworks &amp; risk management programs.</span>
+              <a href="services.html" class="megamenu-bottom-btn">All Compliance Services ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. MSSP MEGA-MENU -->
+        <div class="nav-dropdown-item has-megamenu">
+          <button class="nav-trigger-btn" aria-expanded="false" onclick="toggleNavDropdown(this, event)">
+            <span>MSSP</span>
+            <svg class="chevron-svg" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1l4 4 4-4" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+          <div class="megamenu-panel megamenu-wide">
+            <div class="megamenu-grid-3">
+              <div class="megamenu-col">
+                <div class="megamenu-col-badge">MANAGED SECURITY</div>
+                <ul class="megamenu-links-list">
+                  <li><a href="services.html?service=mssp">Managed Security (MSSP)</a></li>
+                  <li><a href="services.html?service=soc-as-a-service">SOC as a Service</a></li>
+                  <li><a href="services.html?service=vciso-advisory">V-CISO</a></li>
+                  <li><a href="services.html?service=incident-response">Incident Response</a></li>
+                  <li><a href="services.html?service=virtual-security-team">Virtual Security Team</a></li>
+                </ul>
+              </div>
+              <div class="megamenu-col">
+                <div class="megamenu-col-badge">CONTINUOUS MONITORING</div>
+                <ul class="megamenu-links-list">
+                  <li><a href="services.html?service=soar-integration">SOAR Integration</a></li>
+                  <li><a href="services.html?service=security-monitoring">Security Monitoring</a></li>
+                  <li><a href="services.html?service=threat-intelligence-platform">Threat Intelligence Platform</a></li>
+                  <li><a href="services.html?service=cyber-threat-intelligence">Cyber Threat Intelligence</a></li>
+                  <li><a href="services.html?service=lateral-movement-detection">Lateral Movement Detection</a></li>
+                  <li><a href="services.html?service=pentest-as-service">Penetration Test as Service</a></li>
+                </ul>
+              </div>
+              <div class="megamenu-col">
+                <div class="megamenu-col-badge">DEFENSIVE OPS</div>
+                <ul class="megamenu-links-list">
+                  <li><a href="services.html?service=perimeter-security">Perimeter Security</a></li>
+                  <li><a href="services.html?service=access-control-review">Access Control Review</a></li>
+                  <li><a href="services.html?service=cloud-config-review">Cloud Config Review</a></li>
+                  <li><a href="services.html?service=cdn-security">CDN Security</a></li>
+                  <li><a href="services.html?service=network-architecture">Network Architecture</a></li>
+                  <li><a href="services.html?service=cloud-security-management">Cloud Security Management</a></li>
+                  <li><a href="services.html?service=virtualization-security">Virtualization Security</a></li>
+                  <li><a href="services.html" class="megamenu-see-all">All MSSP Services →</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="megamenu-bottom-bar">
+              <span class="megamenu-bottom-hint">24/7 managed security operations, monitoring &amp; defensive infrastructure.</span>
+              <a href="services.html" class="megamenu-bottom-btn">All MSSP Services ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. SERVICES MEGA-MENU -->
+        <div class="nav-dropdown-item has-megamenu">
+          <button class="nav-trigger-btn" aria-expanded="false" onclick="toggleNavDropdown(this, event)">
+            <span>Services</span>
+            <svg class="chevron-svg" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1l4 4 4-4" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+          <div class="megamenu-panel">
+            <div class="megamenu-grid-3">
+              <!-- DOMAIN 1: WORKSHOPS & ACADEMIC -->
+              <div class="megamenu-col">
+                <div class="megamenu-col-badge">TRAINING &amp; ACADEMIC</div>
+                <h4 class="megamenu-col-heading">Workshops &amp; Labs</h4>
+                <p class="megamenu-col-sub">Practical ethical hacking, industrial visits &amp; lab infrastructure</p>
+                <ul class="megamenu-links-list">
+                  <li><a href="services.html?service=cybersecurity-workshops">Cybersecurity Workshops</a></li>
+                  <li><a href="services.html?service=industrial-visits">Industrial Visits (IV)</a></li>
+                  <li><a href="services.html?service=internship-programs">Internship Programs</a></li>
+                  <li><a href="services.html?service=career-guidance-mock-interviews">Career Guidance &amp; Mocks</a></li>
+                  <li><a href="services.html?service=college-lab-setup-support">College Lab Setup Support</a></li>
+                  <li><a href="services.html?service=faculty-awareness-programs">Faculty Awareness Programs</a></li>
+                </ul>
+              </div>
+
+              <!-- DOMAIN 2: CORPORATE DEFENSE & VAPT -->
+              <div class="megamenu-col">
+                <div class="megamenu-col-badge">ENTERPRISE SECURITY</div>
+                <h4 class="megamenu-col-heading">Corporate Defense</h4>
+                <p class="megamenu-col-sub">Real-world attack simulations, VAPT &amp; executive advisory</p>
+                <ul class="megamenu-links-list">
+                  <li><a href="services.html?service=ethical-hacking-training">Ethical Hacking Society</a></li>
+                  <li><a href="services.html?service=vapt-services">VAPT &amp; Pen-Testing</a></li>
+                  <li><a href="services.html?service=vapt-services">Corporate Security Sessions</a></li>
+                  <li><a href="services.html?service=vciso-advisory">vCISO &amp; Governance</a></li>
+                  <li><a href="services.html?service=college-lab-setup-support">Collegiate Academic MOUs</a></li>
+                </ul>
+              </div>
+
+              <!-- DOMAIN 3: GLOBAL CERTIFICATIONS -->
+              <div class="megamenu-col">
+                <div class="megamenu-col-badge">GLOBAL CERTIFICATIONS</div>
+                <h4 class="megamenu-col-heading">Certification Training</h4>
+                <p class="megamenu-col-sub">Accredited bootcamps mapped to international standards</p>
+                <ul class="megamenu-links-list">
+                  <li><a href="index.html#certifications">CompTIA (Security+, CySA+, CASP+)</a></li>
+                  <li><a href="index.html#certifications">EC-Council (CEH, CPENT, CHFI)</a></li>
+                  <li><a href="index.html#certifications">OffSec (OSCP, OSEP, OSDA)</a></li>
+                  <li><a href="index.html#certifications">ISC² · ISACA (CISSP, CCSP, CISA)</a></li>
+                  <li><a href="index.html#certifications">Cisco CyberOps Associate</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Bottom Quick Bar -->
+            <div class="megamenu-bottom-bar">
+              <span class="megamenu-bottom-hint">Delivering world-class cybersecurity training and enterprise solutions from Chennai to the world.</span>
+              <a href="services.html" class="megamenu-bottom-btn">Explore All Services &amp; Practices ↗</a>
+            </div>
+          </div>
+        </div>
+        <a href="index.html#works" class="nav-simple-link">Works</a>
+        <a href="index.html#certifications" class="nav-simple-link">Certifications</a>
+        <a href="index.html#why" class="nav-simple-link">Why Us</a>
+        <a href="index.html#testimonials" class="nav-simple-link">Reviews</a>
+        <a href="index.html#trustedBy" class="nav-simple-link">Trusted By</a>
+        <a href="contact.html" class="nav-simple-link">Contact</a>
+      </nav>
+
+      <!-- Nav CTA Button matching screenshot (Orange Pill with Dark Arrow Circle) -->
+      <div class="nav-cta-actions">
+        <a href="contact.html" class="btn-book-call">
+          <span class="btn-text-full">Book a call</span>
+          <span class="btn-text-mobile">Contact</span>
+          <span class="pill-circle-dark"><svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 7h12M8 2l5 5-5 5"/></svg></span>
+        </a>
+        <button class="mobile-hamburger" id="mobileHamburger" aria-label="Toggle menu" onclick="openMobileMenu()">
+          <span class="ham-line"></span>
+          <span class="ham-line"></span>
+          <span class="ham-line"></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MOBILE MENU MODAL (MATCHING IMAGES 1 & 2) -->
+    <!-- MOBILE MENU MODAL (ACCORDION DRAWER - EXACT MATCH TO USER REFERENCE) -->
+  <div class="mobile-menu-backdrop" id="mobileMenuBackdrop" onclick="closeMobileMenu()"></div>
+  <div class="mobile-menu-card" id="mobileMenuCard" role="dialog" aria-modal="true" aria-label="Navigation Menu">
+    <div class="mobile-menu-header">
+      <a href="index.html#hero" class="mobile-brand-box" onclick="closeMobileMenu()">
+        <img src="images/logo.jpeg" alt="CYBERENTITYZ Logo" class="mobile-brand-logo">
+        <span class="mobile-brand-name">CYBERENTITYZ</span>
+      </a>
+      <button type="button" class="mobile-menu-close-btn" id="mobileMenuClose" onclick="closeMobileMenu()" aria-label="Close menu">
+        <svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M3 3l10 10M13 3L3 13"/></svg>
+      </button>
+    </div>
+
+    <div class="mobile-menu-nav-scroll">
+      <!-- QUICK CONTACT ACTION (VISIBLE IMMEDIATELY ON MOBILE DRAWER OPEN) -->
+      <div class="mobile-menu-quick-contact">
+        <a href="contact.html" class="mobile-quick-contact-btn" onclick="closeMobileMenu()">
+          <div class="mobile-quick-contact-left">
+            <span class="mobile-quick-badge">READY TO SECURE?</span>
+            <span class="mobile-quick-title">Contact Our Security Team</span>
+          </div>
+          <span class="mobile-quick-arrow">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 7h12M8 2l5 5-5 5"/></svg>
+          </span>
+        </a>
+      </div>
+      <!-- 1. ABOUT US ACCORDION -->
+      <div class="mobile-accordion-item">
+        <button type="button" class="mobile-accordion-header" onclick="toggleMobileAccordion(this)">
+          <span>About Us</span>
+          <svg class="mobile-accordion-chevron" viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M1 1.5l5 5 5-5"/></svg>
+        </button>
+        <div class="mobile-accordion-body">
+          <a href="index.html#about" class="mobile-sublink" onclick="closeMobileMenu()">About Cyberentityz →</a>
+          <a href="index.html#why" class="mobile-sublink" onclick="closeMobileMenu()">Why Choose Us</a>
+          <a href="index.html#works" class="mobile-sublink" onclick="closeMobileMenu()">Works &amp; Case Studies</a>
+          <a href="index.html#testimonials" class="mobile-sublink" onclick="closeMobileMenu()">Client Reviews</a>
+          <a href="index.html#trustedBy" class="mobile-sublink" onclick="closeMobileMenu()">Trusted Partners</a>
+        </div>
+      </div>
+
+      <!-- 2. ASSURANCE ACCORDION (MATCHING USER REFERENCE) -->
+      <div class="mobile-accordion-item active">
+        <button type="button" class="mobile-accordion-header" onclick="toggleMobileAccordion(this)">
+          <span>Assurance</span>
+          <svg class="mobile-accordion-chevron" viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M1 1.5l5 5 5-5"/></svg>
+        </button>
+        <div class="mobile-accordion-body">
+          <span class="mobile-sub-badge">SECURITY TESTING (VAPT)</span>
+          <a href="services.html?service=web-application-vapt" class="mobile-sublink" onclick="closeMobileMenu()">Web Application VAPT →</a>
+          <a href="services.html?service=mobile-app-security" class="mobile-sublink" onclick="closeMobileMenu()">Mobile App Security</a>
+          <a href="services.html?service=api-security-testing" class="mobile-sublink" onclick="closeMobileMenu()">API Security Testing</a>
+          <a href="services.html?service=cloud-security-testing" class="mobile-sublink" onclick="closeMobileMenu()">Cloud Security Assessment</a>
+          <a href="services.html?service=network-security-testing" class="mobile-sublink" onclick="closeMobileMenu()">Network Security Audit</a>
+          <a href="services.html?service=iot-penetration-testing" class="mobile-sublink" onclick="closeMobileMenu()">IoT Penetration Testing</a>
+          <a href="services.html?service=ot-security-testing" class="mobile-sublink" onclick="closeMobileMenu()">OT / SCADA Security</a>
+          <a href="services.html?service=database-penetration-testing" class="mobile-sublink" onclick="closeMobileMenu()">Database Penetration</a>
+          <a href="services.html?service=wireless-security-testing" class="mobile-sublink" onclick="closeMobileMenu()">Wireless Security</a>
+          <a href="services.html?service=crest-vapt" class="mobile-sublink" onclick="closeMobileMenu()">CREST VAPT</a>
+
+          <span class="mobile-sub-badge">ADVANCED ASSESSMENT</span>
+          <a href="services.html?service=red-team-operations" class="mobile-sublink" onclick="closeMobileMenu()">Red Team Operations</a>
+          <a href="services.html?service=ai-llm-security-testing" class="mobile-sublink" onclick="closeMobileMenu()">AI / LLM Security Audit</a>
+          <a href="services.html?service=digital-forensics-incident-response" class="mobile-sublink" onclick="closeMobileMenu()">Digital Forensics (DFIR)</a>
+          <a href="services.html?service=cyber-intelligence" class="mobile-sublink" onclick="closeMobileMenu()">Cyber Intelligence</a>
+          <a href="services.html?service=secure-code-review" class="mobile-sublink" onclick="closeMobileMenu()">Secure Code Review</a>
+          <a href="services.html?service=devsecops" class="mobile-sublink" onclick="closeMobileMenu()">DevSecOps</a>
+          <a href="services.html?service=hardware-security" class="mobile-sublink" onclick="closeMobileMenu()">Hardware Security</a>
+          <a href="services.html?service=thick-client-security" class="mobile-sublink" onclick="closeMobileMenu()">Thick Client Security</a>
+          <a href="services.html?service=host-level-security" class="mobile-sublink" onclick="closeMobileMenu()">Host Level Security</a>
+          <a href="services.html?service=automotive-vapt" class="mobile-sublink" onclick="closeMobileMenu()">Automotive VAPT</a>
+          <a href="services.html?service=telecom-vapt" class="mobile-sublink" onclick="closeMobileMenu()">Telecom VAPT</a>
+
+          <span class="mobile-sub-badge">DATA &amp; PRIVACY</span>
+          <a href="services.html?service=data-security-audit" class="mobile-sublink" onclick="closeMobileMenu()">Data Security Audit</a>
+          <a href="services.html?service=data-privacy-audit" class="mobile-sublink" onclick="closeMobileMenu()">Data Privacy Audit</a>
+          <a href="services.html?service=data-masking-privacy" class="mobile-sublink" onclick="closeMobileMenu()">Data Masking &amp; Privacy</a>
+          <a href="services.html?service=dspm" class="mobile-sublink" onclick="closeMobileMenu()">DSPM</a>
+          <a href="services.html?service=data-breach-simulation" class="mobile-sublink" onclick="closeMobileMenu()">Data Breach Simulation</a>
+          <a href="services.html?service=sbom-sca" class="mobile-sublink" onclick="closeMobileMenu()">SBOM &amp; SCA</a>
+          <a href="services.html?service=website-security" class="mobile-sublink" onclick="closeMobileMenu()">Website Security</a>
+          <a href="services.html" class="mobile-sublink mobile-sublink-see-all" onclick="closeMobileMenu()">All Assurance Services →</a>
+        </div>
+      </div>
+
+      <!-- 3. COMPLIANCE ACCORDION -->
+      <div class="mobile-accordion-item">
+        <button type="button" class="mobile-accordion-header" onclick="toggleMobileAccordion(this)">
+          <span>Compliance</span>
+          <svg class="mobile-accordion-chevron" viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M1 1.5l5 5 5-5"/></svg>
+        </button>
+        <div class="mobile-accordion-body">
+          <span class="mobile-sub-badge">COMPLIANCE FRAMEWORKS</span>
+          <a href="services.html?service=iso-27001" class="mobile-sublink" onclick="closeMobileMenu()">ISO 27001:2022</a>
+          <a href="services.html?service=soc-2-compliance" class="mobile-sublink" onclick="closeMobileMenu()">SOC 2</a>
+          <a href="services.html?service=pci-dss" class="mobile-sublink" onclick="closeMobileMenu()">PCI-DSS</a>
+          <a href="services.html?service=hipaa" class="mobile-sublink" onclick="closeMobileMenu()">HIPAA</a>
+          <a href="services.html?service=gdpr" class="mobile-sublink" onclick="closeMobileMenu()">GDPR</a>
+          <a href="services.html?service=dpdpa-compliance" class="mobile-sublink" onclick="closeMobileMenu()">DPDPA</a>
+          <a href="services.html?service=nist-csf" class="mobile-sublink" onclick="closeMobileMenu()">NIST CSF</a>
+          <a href="services.html?service=irdai" class="mobile-sublink" onclick="closeMobileMenu()">IRDAI</a>
+          <a href="services.html?service=iso-22301" class="mobile-sublink" onclick="closeMobileMenu()">ISO 22301 (BCP)</a>
+          <a href="services.html?service=iso-42001" class="mobile-sublink" onclick="closeMobileMenu()">ISO 42001 (AI)</a>
+          <a href="services.html?service=iec-62443" class="mobile-sublink" onclick="closeMobileMenu()">IEC 62443 (OT)</a>
+          <a href="services.html?service=iso-21434" class="mobile-sublink" onclick="closeMobileMenu()">ISO 21434 (Automotive)</a>
+
+          <span class="mobile-sub-badge">GRC SERVICES</span>
+          <a href="services.html?service=grc-framework" class="mobile-sublink" onclick="closeMobileMenu()">GRC Framework</a>
+          <a href="services.html?service=cyber-risk-assessment" class="mobile-sublink" onclick="closeMobileMenu()">Cyber Risk Assessment</a>
+          <a href="services.html?service=third-party-risk-management" class="mobile-sublink" onclick="closeMobileMenu()">Third-Party Risk (TPRM)</a>
+          <a href="services.html?service=data-privacy-compliance" class="mobile-sublink" onclick="closeMobileMenu()">Data Privacy Compliance</a>
+          <a href="services.html?service=data-retention-policy" class="mobile-sublink" onclick="closeMobileMenu()">Data Retention Policy</a>
+          <a href="services.html?service=national-security-compliance" class="mobile-sublink" onclick="closeMobileMenu()">National Security Compliance</a>
+          <a href="services.html?service=cyber-insurance" class="mobile-sublink" onclick="closeMobileMenu()">Cybersecurity Insurance</a>
+          <a href="services.html" class="mobile-sublink mobile-sublink-see-all" onclick="closeMobileMenu()">All Compliance Services →</a>
+        </div>
+      </div>
+
+      <!-- 4. MSSP ACCORDION -->
+      <div class="mobile-accordion-item">
+        <button type="button" class="mobile-accordion-header" onclick="toggleMobileAccordion(this)">
+          <span>MSSP</span>
+          <svg class="mobile-accordion-chevron" viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M1 1.5l5 5 5-5"/></svg>
+        </button>
+        <div class="mobile-accordion-body">
+          <span class="mobile-sub-badge">MANAGED SECURITY</span>
+          <a href="services.html?service=mssp" class="mobile-sublink" onclick="closeMobileMenu()">Managed Security (MSSP)</a>
+          <a href="services.html?service=soc-as-a-service" class="mobile-sublink" onclick="closeMobileMenu()">SOC as a Service</a>
+          <a href="services.html?service=vciso-advisory" class="mobile-sublink" onclick="closeMobileMenu()">V-CISO</a>
+          <a href="services.html?service=incident-response" class="mobile-sublink" onclick="closeMobileMenu()">Incident Response</a>
+          <a href="services.html?service=virtual-security-team" class="mobile-sublink" onclick="closeMobileMenu()">Virtual Security Team</a>
+
+          <span class="mobile-sub-badge">CONTINUOUS MONITORING</span>
+          <a href="services.html?service=soar-integration" class="mobile-sublink" onclick="closeMobileMenu()">SOAR Integration</a>
+          <a href="services.html?service=security-monitoring" class="mobile-sublink" onclick="closeMobileMenu()">Security Monitoring</a>
+          <a href="services.html?service=threat-intelligence-platform" class="mobile-sublink" onclick="closeMobileMenu()">Threat Intelligence Platform</a>
+          <a href="services.html?service=cyber-threat-intelligence" class="mobile-sublink" onclick="closeMobileMenu()">Cyber Threat Intelligence</a>
+          <a href="services.html?service=lateral-movement-detection" class="mobile-sublink" onclick="closeMobileMenu()">Lateral Movement Detection</a>
+          <a href="services.html?service=pentest-as-service" class="mobile-sublink" onclick="closeMobileMenu()">Penetration Test as Service</a>
+
+          <span class="mobile-sub-badge">DEFENSIVE OPS</span>
+          <a href="services.html?service=perimeter-security" class="mobile-sublink" onclick="closeMobileMenu()">Perimeter Security</a>
+          <a href="services.html?service=access-control-review" class="mobile-sublink" onclick="closeMobileMenu()">Access Control Review</a>
+          <a href="services.html?service=cloud-config-review" class="mobile-sublink" onclick="closeMobileMenu()">Cloud Config Review</a>
+          <a href="services.html?service=cdn-security" class="mobile-sublink" onclick="closeMobileMenu()">CDN Security</a>
+          <a href="services.html?service=network-architecture" class="mobile-sublink" onclick="closeMobileMenu()">Network Architecture</a>
+          <a href="services.html?service=cloud-security-management" class="mobile-sublink" onclick="closeMobileMenu()">Cloud Security Management</a>
+          <a href="services.html?service=virtualization-security" class="mobile-sublink" onclick="closeMobileMenu()">Virtualization Security</a>
+          <a href="services.html" class="mobile-sublink mobile-sublink-see-all" onclick="closeMobileMenu()">All MSSP Services →</a>
+        </div>
+      </div>
+
+      <!-- 5. SERVICES ACCORDION -->
+      <div class="mobile-accordion-item">
+        <button type="button" class="mobile-accordion-header" onclick="toggleMobileAccordion(this)">
+          <span>Services</span>
+          <svg class="mobile-accordion-chevron" viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M1 1.5l5 5 5-5"/></svg>
+        </button>
+        <div class="mobile-accordion-body">
+          <span class="mobile-sub-badge">TRAINING &amp; ACADEMIC</span>
+          <a href="services.html?service=cybersecurity-workshops" class="mobile-sublink" onclick="closeMobileMenu()">Cybersecurity Workshops</a>
+          <a href="services.html?service=industrial-visits" class="mobile-sublink" onclick="closeMobileMenu()">Industrial Visits (IV)</a>
+          <a href="services.html?service=internship-programs" class="mobile-sublink" onclick="closeMobileMenu()">Internship Programs</a>
+          <a href="services.html?service=career-guidance-mock-interviews" class="mobile-sublink" onclick="closeMobileMenu()">Career Guidance &amp; Mock Interviews</a>
+          <a href="services.html?service=college-lab-setup-support" class="mobile-sublink" onclick="closeMobileMenu()">College Lab Setup &amp; Support</a>
+          <a href="services.html?service=faculty-awareness-programs" class="mobile-sublink" onclick="closeMobileMenu()">Faculty Awareness Programs</a>
+          <a href="services.html?service=school-awareness-programs" class="mobile-sublink" onclick="closeMobileMenu()">School Awareness Programs</a>
+
+          <span class="mobile-sub-badge">ALL 80+ SERVICES</span>
+          <a href="services.html" class="mobile-sublink mobile-sublink-see-all" onclick="closeMobileMenu()">Explore All 80+ Cybersecurity Services →</a>
+        </div>
+      </div>
+
+      <!-- 6. DIRECT LINKS -->
+      <a href="index.html#certifications" class="mobile-direct-link" onclick="closeMobileMenu()">
+        <span>Certifications</span>
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 2l5 5-5 5"/></svg>
+      </a>
+      <a href="contact.html" class="mobile-direct-link" onclick="closeMobileMenu()">
+        <span>Contact Us</span>
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 2l5 5-5 5"/></svg>
+      </a>
+
+      <!-- 7. CTA BUTTON -->
+      <div class="mobile-menu-cta-wrap">
+        <a href="contact.html" class="mobile-menu-book-btn" onclick="closeMobileMenu()">
+          <span>Book a Consultation</span>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M1 7h12M8 2l5 5-5 5"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <main>
+    
+    <!-- DYNAMIC HERO (NORD CONSULTING SCREENSHOT EXACT MATCH) -->
+    <section class="services-hero-container">
+      <div class="container">
+        <div class="services-dark-card" id="servicesHeroCard">
+          <div class="services-kicker-row">
+            <span id="heroTagLeft">( CYBERENTITYZ ) SERVICES</span>
+            <span id="heroTagRight">NINE PRACTICES · PARTNER-LED</span>
+          </div>
+
+          <h1 class="services-display-title" id="heroMainTitle">
+            Nine practices.
+            <span class="italic-serif-orange" id="heroTitleSub">One standard of defense.</span>
+          </h1>
+
+          <p class="services-lead-sub" id="heroLeadSub">
+            Every engagement is scoped around a verifiable security outcome you need to reach, never around automated checkbox hours or junior headcount.
+          </p>
+
+          <div id="heroCtaWrap">
+            <a href="index.html#contact" class="framer-morph-btn">
+              <span class="btn-morph-text">Schedule a scoping session</span>
+              <span class="btn-morph-icon">
+                <svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 7h12M8 2l5 5-5 5"/></svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIRECTORY VIEW: SHOWN WHEN NO ?service= PARAM -->
+    <div id="fullCatalogueView">
+      
+      <!-- Practices List (Matching Screenshot: nordconsulting.framer.website/services) -->
+      <section class="practices-list-wrap">
+        <div class="container">
+          
+          <!-- Practice 01 -->
+          <a href="services.html?service=cybersecurity-workshops" class="practice-row-item">
+            <span class="p-num-orange">01</span>
+            <h2 class="p-title-h2">Cybersecurity Workshops</h2>
+            <div class="p-right-col">
+              <div>
+                <p class="p-desc-p">Engaging hands-on workshops covering ethical hacking, network security, web vulnerabilities, and real-time cyber threat demonstrations for students.</p>
+                <span class="p-explore-link">Explore practice →</span>
+              </div>
+            </div>
+            <span class="p-circle-arrow">↗</span>
+          </a>
+
+          <!-- Practice 02 -->
+          <a href="services.html?service=industrial-visits" class="practice-row-item">
+            <span class="p-num-orange">02</span>
+            <h2 class="p-title-h2">Industrial Visits (IV)</h2>
+            <div class="p-right-col">
+              <div>
+                <p class="p-desc-p">Immersive IV programs where students experience live cybersecurity environments, SOC operations, and enterprise security infrastructure.</p>
+                <span class="p-explore-link">Explore practice →</span>
+              </div>
+            </div>
+            <span class="p-circle-arrow">↗</span>
+          </a>
+
+          <!-- Practice 03 -->
+          <a href="services.html?service=internship-programs" class="practice-row-item">
+            <span class="p-num-orange">03</span>
+            <h2 class="p-title-h2">Internship Programs</h2>
+            <div class="p-right-col">
+              <div>
+                <p class="p-desc-p">Structured internship opportunities in ethical hacking, digital forensics, and security operations — building real industry experience.</p>
+                <span class="p-explore-link">Explore practice →</span>
+              </div>
+            </div>
+            <span class="p-circle-arrow">↗</span>
+          </a>
+
+          <!-- Practice 04 -->
+          <a href="services.html?service=career-guidance-mock-interviews" class="practice-row-item">
+            <span class="p-num-orange">04</span>
+            <h2 class="p-title-h2">Career Guidance &amp; Mock Interviews</h2>
+            <div class="p-right-col">
+              <div>
+                <p class="p-desc-p">Resume preparation with ATS optimization, career path planning, global job placement guidance, and mock technical interviews.</p>
+                <span class="p-explore-link">Explore practice →</span>
+              </div>
+            </div>
+            <span class="p-circle-arrow">↗</span>
+          </a>
+
+          <!-- Practice 05 -->
+          <a href="services.html?service=college-lab-setup-support" class="practice-row-item">
+            <span class="p-num-orange">05</span>
+            <h2 class="p-title-h2">College Lab Setup Support</h2>
+            <div class="p-right-col">
+              <div>
+                <p class="p-desc-p">Complete support for establishing cybersecurity labs — hardware, software, network architecture design, and ongoing technical consultation.</p>
+                <span class="p-explore-link">Explore practice →</span>
+              </div>
+            </div>
+            <span class="p-circle-arrow">↗</span>
+          </a>
+
+          <!-- Practice 06 -->
+          <a href="services.html?service=faculty-awareness-programs" class="practice-row-item">
+            <span class="p-num-orange">06</span>
+            <h2 class="p-title-h2">Faculty Awareness Programs</h2>
+            <div class="p-right-col">
+              <div>
+                <p class="p-desc-p">Cybersecurity awareness and upskilling programs tailored for faculty members to stay current with evolving threats and technologies.</p>
+                <span class="p-explore-link">Explore practice →</span>
+              </div>
+            </div>
+            <span class="p-circle-arrow">↗</span>
+          </a>
+
+          <!-- Practice 07 -->
+          <a href="services.html?service=ethical-hacking-training" class="practice-row-item">
+            <span class="p-num-orange">07</span>
+            <h2 class="p-title-h2">Ethical Hacking Training</h2>
+            <div class="p-right-col">
+              <div>
+                <p class="p-desc-p">Offensive and defensive security bootcamps, attack simulations, hands-on lab environments, and global certification preparation.</p>
+                <span class="p-explore-link">Explore practice →</span>
+              </div>
+            </div>
+            <span class="p-circle-arrow">↗</span>
+          </a>
+
+          <!-- Practice 08 -->
+          <a href="services.html?service=vapt-services" class="practice-row-item">
+            <span class="p-num-orange">08</span>
+            <h2 class="p-title-h2">VAPT Services &amp; Corporate Security</h2>
+            <div class="p-right-col">
+              <div>
+                <p class="p-desc-p">Vulnerability assessment, penetration testing across web and enterprise IT, and employee cybersecurity awareness sessions.</p>
+                <span class="p-explore-link">Explore practice →</span>
+              </div>
+            </div>
+            <span class="p-circle-arrow">↗</span>
+          </a>
+
+          <!-- Practice 09 -->
+          <a href="services.html?service=vciso-advisory" class="practice-row-item">
+            <span class="p-num-orange">09</span>
+            <h2 class="p-title-h2">vCISO Advisory &amp; Governance</h2>
+            <div class="p-right-col">
+              <div>
+                <p class="p-desc-p">Strategic executive cybersecurity leadership, compliance frameworks (ISO 27001, SOC 2), and institutional academic MOUs.</p>
+                <span class="p-explore-link">Explore practice →</span>
+              </div>
+            </div>
+            <span class="p-circle-arrow">↗</span>
+          </a>
+
+        </div>
+      </section>
+
+    </div>
+
+    <!-- SINGLE SERVICE DETAIL VIEW: SHOWN WHEN ?service=slug IS PRESENT -->
+    <div id="singleServiceView">
+      <section class="detail-body-container">
+        <div class="container detail-columns-grid">
+          
+          <!-- Left Article -->
+          <div class="detail-main-content">
+            <div style="margin-bottom:2rem;">
+              <a href="services.html" class="btn-tier-outline" style="display:inline-flex; width:auto; padding:0.5rem 1.25rem;">
+                <span>← Back to all practices</span>
+              </a>
+            </div>
+
+            <div class="section-tag-row">
+              <span class="section-num-tag">(01)</span>
+              <span class="tag-title" id="detailCatTag">Service Scope</span>
+            </div>
+            <h2 class="section-main-heading" style="color:#1c1c1c;" id="detailSubheading">Comprehensive Adversary Defense</h2>
+            
+            <div id="detailOverviewHtml" style="font-size:1.05rem; line-height:1.75; color:#4a4a54; margin-bottom:3rem;"></div>
+
+            <!-- Threats Addressed -->
+            <div class="section-tag-row">
+              <span class="section-num-tag">(02)</span>
+              <span class="tag-title">Threat Intelligence</span>
+            </div>
+            <h3 style="font-size:1.5rem; font-weight:600; color:#1c1c1c; margin-bottom:1rem;">Target Vectors &amp; Threat Scenarios Neutralized</h3>
+            <div class="threat-tag-cloud" id="detailThreatsCloud"></div>
+
+            <!-- 5 Phase Methodology -->
+            <div class="section-tag-row">
+              <span class="section-num-tag">(03)</span>
+              <span class="tag-title">Engagement Methodology</span>
+            </div>
+            <h3 style="font-size:1.5rem; font-weight:600; color:#1c1c1c; margin-bottom:1.5rem;">5-Phase Execution &amp; Verification Roadmap</h3>
+            <div id="detailMethodologyList"></div>
+
+            <!-- Deliverables & Benefits -->
+            <div class="section-tag-row" style="margin-top:3rem;">
+              <span class="section-num-tag">(04)</span>
+              <span class="tag-title">Client Deliverables</span>
+            </div>
+            <h3 style="font-size:1.5rem; font-weight:600; color:#1c1c1c; margin-bottom:1.5rem;">Formal Artifacts &amp; Actionable Playbooks</h3>
+            <div id="detailDeliverablesList"></div>
+
+            <div id="detailBenefitsWrap" style="display:none; margin-top:3rem;">
+              <div class="section-tag-row">
+                <span class="section-num-tag">(05)</span>
+                <span class="tag-title">Why This Engagement</span>
+              </div>
+              <h3 style="font-size:1.5rem; font-weight:600; color:#1c1c1c; margin-bottom:1rem;">Key Benefits</h3>
+              <div id="detailBenefitsList"></div>
+            </div>
+
+            <div id="detailStandardsWrap" style="display:none; margin-top:3rem;">
+              <div class="section-tag-row">
+                <span class="section-num-tag">(06)</span>
+                <span class="tag-title">Compliance Alignment</span>
+              </div>
+              <h3 style="font-size:1.5rem; font-weight:600; color:#1c1c1c; margin-bottom:1rem;">Standards &amp; Frameworks Covered</h3>
+              <div class="threat-tag-cloud" id="detailStandardsList"></div>
+            </div>
+
+            <div id="detailFaqWrap" style="display:none; margin-top:3rem;">
+              <div class="section-tag-row">
+                <span class="section-num-tag">(07)</span>
+                <span class="tag-title">FAQ</span>
+              </div>
+              <h3 style="font-size:1.5rem; font-weight:600; color:#1c1c1c; margin-bottom:1rem;">Frequently Asked Questions</h3>
+              <div id="detailFaqList"></div>
+            </div>
+          </div>
+
+          <!-- Right Sticky Booking Card -->
+          <div class="sticky-consult-col">
+            <div class="sticky-consult-card">
+              <span class="badge-most-chosen" style="margin-bottom:1.25rem; display:inline-block;">DIRECT CONSULTATION</span>
+              <h3 style="font-size:1.6rem; font-weight:600; color:#1c1c1c; margin:0 0 0.5rem;" id="cardServiceTitle">Web Application VAPT</h3>
+              <p style="font-size:14px; color:#6a6a74; margin:0 0 2rem;">A partner reviews your scope and responds within one business day.</p>
+
+              <form class="scoping-request-form" onsubmit="event.preventDefault(); alert('Consultation request received for ' + document.getElementById('cardServiceTitle').textContent + '. A senior advisor will contact you within 24 hours.');">
+                <div class="form-group-modern">
+                  <label class="form-label-modern">Full Name <span class="req-star">*</span></label>
+                  <input type="text" class="form-input-modern" required placeholder="Jane Smith">
+                </div>
+
+                <div class="form-group-modern">
+                  <label class="form-label-modern">Work Email <span class="req-star">*</span></label>
+                  <input type="email" class="form-input-modern" required placeholder="jane@company.com">
+                </div>
+
+                <div class="form-group-modern">
+                  <label class="form-label-modern">Phone / WhatsApp <span class="req-star">*</span></label>
+                  <input type="tel" class="form-input-modern" required placeholder="+91 95000 00000">
+                </div>
+
+                <div class="form-group-modern">
+                  <label class="form-label-modern">Target Assets / Scope</label>
+                  <textarea rows="3" class="form-input-modern form-textarea-modern" placeholder="Target URLs, IPs, cloud frameworks, or expected audit timeline..."></textarea>
+                </div>
+
+                <p class="form-nda-notice">We never share your information. Mutual NDA executed on request.</p>
+
+                <button type="submit" class="btn-consult-submit">
+                  <span>Dispatch Scoping Request</span>
+                  <span class="circle-arrow-white"><svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 7h12M8 2l5 5-5 5"/></svg></span>
+                </button>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+  <!-- ENTERPRISE FOOTER (EXACT MATCH TO NORD CONSULTING / IMAGE 4) -->
+  <footer class="nord-enterprise-footer" id="siteFooter">
+    <div class="container">
+      
+      <!-- Top Row: Newsletter Brief (Left) + 3-4 Practice Columns (Right) -->
+      <div class="nord-footer-top-row">
+        
+        <!-- Left Column: The CYBERENTITYZ Brief & Subscribe Form -->
+        <div class="nord-footer-brief-col">
+          <h3 class="nord-brief-heading">The CYBERENTITYZ™ Brief</h3>
+          <p class="nord-brief-sub">One considered idea for leaders, once a month.</p>
+          
+          <form class="nord-brief-form" onsubmit="event.preventDefault(); alert('Subscribed to The CYBERENTITYZ Brief!');">
+            <div class="nord-input-group">
+              <input type="email" placeholder="you@company.com" required class="nord-brief-input">
+              <button type="submit" class="nord-brief-btn">
+                <span>Subscribe</span>
+                <span class="nord-btn-arrow">
+                  <svg width="12" height="12" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 7h12M8 2l5 5-5 5"/></svg>
+                </span>
+              </button>
+            </div>
+          </form>
+          <span class="nord-brief-hint">NO SPAM. UNSUBSCRIBE ANYTIME.</span>
+        </div>
+
+        <!-- Right Columns: Practices, Firm, Contact -->
+        <div class="nord-footer-cols-wrap">
+          
+          <!-- Column 1: Practices -->
+          <div class="nord-footer-col">
+            <span class="nord-col-eyebrow">PRACTICES</span>
+            <ul class="nord-col-links">
+              <li><a href="services.html?service=web-application-vapt">Security Testing (VAPT)</a></li>
+              <li><a href="services.html?service=iso-27001">Governance &amp; GRC</a></li>
+              <li><a href="services.html?service=soc-as-a-service">Managed MSSP</a></li>
+              <li><a href="services.html?service=cybersecurity-workshops">Academic &amp; IV Training</a></li>
+              <li><a href="services.html?service=red-team-operations">Red Team Operations</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 2: Firm -->
+          <div class="nord-footer-col">
+            <span class="nord-col-eyebrow">FIRM</span>
+            <ul class="nord-col-links">
+              <li><a href="index.html#about">About</a></li>
+              <li><a href="index.html#works">Our Works</a></li>
+              <li><a href="index.html#certifications">Certifications</a></li>
+              <li><a href="index.html#why">Why Us</a></li>
+              <li><a href="index.html#testimonials">Reviews</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Contact & Connect -->
+          <div class="nord-footer-col">
+            <span class="nord-col-eyebrow">CONTACT</span>
+            <ul class="nord-col-links">
+              <li><a href="mailto:info@cyberentityz.com">info@cyberentityz.com</a></li>
+              <li><a href="tel:+919500551090">+91 9500551090</a></li>
+              <li><a href="contact.html">Chennai · Tamil Nadu</a></li>
+            </ul>
+            <span class="nord-col-eyebrow" style="margin-top:1.5rem; display:block;">CONNECT</span>
+            <ul class="nord-col-links">
+              <li><a href="https://www.linkedin.com/company/cyberentityz/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+              <li><a href="http://x.com/cyberentityz?s=21" target="_blank" rel="noopener noreferrer">X (Twitter)</a></li>
+              <li><a href="https://www.facebook.com/share/1CWFML5nvn/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+              <li><a href="https://www.instagram.com/cyberentityz?igsh=MTQ5aDdoNXQ0cWxqcA==" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+              <li><a href="https://chat.whatsapp.com/G7UeSNxGIh17lJVxgIIX0n" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Interactive Dotmark Halftone Canvas for CYBERENTITYZ (Matching Images 1 & 2) -->
+      <div class="nord-giant-brand-row dotmark-canvas-container" title="Move cursor to interact with CYBERENTITYZ dot marks">
+        <canvas id="dotmarkFooterCanvas"></canvas>
+      </div>
+
+      <!-- Bottom Meta Strip: Copyright on Left, Privacy/Terms/Back-to-top on Right -->
+      <div class="nord-footer-bottom-strip">
+        <div class="nord-copyright-text">
+          © 2026 CYBERENTITYZ Ltd · Registered in Chennai, Tamil Nadu
+        </div>
+        <div class="nord-footer-legal-links">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <button class="nord-back-top-link" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Back to top ↑</button>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="services-data.js"></script>
+  <script>
+    function loadServiceFromUrl() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const serviceSlug = urlParams.get('service');
+
+      if (serviceSlug && typeof SERVICES_DATA !== 'undefined') {
+        const found = (typeof getServiceById === 'function' ? getServiceById(serviceSlug) : null) || 
+                      SERVICES_DATA.find(s => s.id === serviceSlug || s.id.toLowerCase() === serviceSlug.toLowerCase());
+        if (found) {
+          renderSingleService(found);
+          return;
+        }
+      }
+
+      // Default: render the full catalogue
+      renderCatalogue();
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      loadServiceFromUrl();
+
+      // Intercept service links on the current page for instantaneous SPA transition
+      document.body.addEventListener('click', (e) => {
+        const link = e.target.closest('a[href*="service="]');
+        if (link && link.pathname.endsWith('services.html')) {
+          e.preventDefault();
+          const targetUrl = new URL(link.href, window.location.origin);
+          const slug = targetUrl.searchParams.get('service');
+          if (slug && typeof SERVICES_DATA !== 'undefined') {
+            const found = SERVICES_DATA.find(s => s.id === slug || s.id.toLowerCase() === slug.toLowerCase());
+            if (found) {
+              history.pushState({ service: slug }, '', link.href);
+              renderSingleService(found);
+              // Close any open mega-menus
+              document.querySelectorAll('.has-megamenu').forEach(item => item.classList.remove('open'));
+            }
+          }
+        }
+      });
+    });
+
+    window.addEventListener('popstate', () => {
+      loadServiceFromUrl();
+    });
+
+    function renderCatalogue(filterDomain = 'all', searchQuery = '') {
+      document.getElementById('fullCatalogueView').style.display = 'block';
+      document.getElementById('singleServiceView').style.display = 'none';
+
+      const grid = document.getElementById('servicesGrid');
+      if (!grid || typeof SERVICES_DATA === 'undefined') return;
+
+      const q = searchQuery.toLowerCase().trim();
+      const filtered = SERVICES_DATA.filter(s => {
+        const matchDomain = filterDomain === 'all' || s.domain.toLowerCase() === filterDomain.toLowerCase();
+        const matchSearch = !q || s.title.toLowerCase().includes(q) || s.category.toLowerCase().includes(q) || s.overview.toLowerCase().includes(q);
+        return matchDomain && matchSearch;
+      });
+
+      grid.innerHTML = filtered.map(s => `
+        <a href="services.html?service=${s.id}" class="service-catalogue-card">
+          <div class="card-meta-bar">
+            <span class="card-category-mono">${s.category}</span>
+            <span class="card-domain-tag">${s.domain}</span>
+          </div>
+          <h3 class="card-service-title">${s.title}</h3>
+          <p class="card-service-desc">${s.tagline || (s.overview.substring(0, 110) + '...')}</p>
+          <div class="card-footer-cta">
+            <span>Explore Technical Scope</span>
+            <span style="font-weight:700;">↗</span>
+          </div>
+        </a>
+      `).join('');
+    }
+
+    function renderSingleService(service) {
+      document.getElementById('fullCatalogueView').style.display = 'none';
+      document.getElementById('singleServiceView').style.display = 'block';
+
+      // Update Hero
+      document.getElementById('heroTagLeft').textContent = `( ${service.domain.toUpperCase()} DOMAIN ) ${service.category}`;
+      document.getElementById('heroTagRight').textContent = `CREST & OWASP ALIGNED`;
+      document.getElementById('heroMainTitle').innerHTML = `${service.title} <span class="italic-serif-orange">${service.tagline}</span>`;
+      document.getElementById('heroLeadSub').textContent = service.overview.split('\n\n')[0];
+      document.getElementById('cardServiceTitle').textContent = service.title;
+      document.getElementById('detailSubheading').textContent = service.title + ' — Technical Specifications';
+
+      // Overview
+      const pGraph = service.overview.split('\n\n').map(p => `<p style="margin-bottom:1.25rem;">${p}</p>`).join('');
+      document.getElementById('detailOverviewHtml').innerHTML = pGraph;
+
+      // Threats
+      const threatsBox = document.getElementById('detailThreatsCloud');
+      if (service.threats) {
+        threatsBox.innerHTML = service.threats.map(t => `<span class="threat-pill">■ ${t}</span>`).join('');
+      }
+
+      // Methodology
+      const methBox = document.getElementById('detailMethodologyList');
+      if (service.methodology) {
+        methBox.innerHTML = service.methodology.map((m, idx) => `
+          <div class="methodology-step-box">
+            <div class="m-step-kicker">PHASE 0${idx + 1}</div>
+            <h4 class="m-step-title">${m.phase}</h4>
+            <p class="m-step-desc">${m.desc}</p>
+          </div>
+        `).join('');
+      }
+
+      // Deliverables
+      const delivBox = document.getElementById('detailDeliverablesList');
+      if (service.deliverables) {
+        delivBox.innerHTML = service.deliverables.map(d => `
+          <div style="background:#ffffff; border:1px solid rgba(0,0,0,0.08); border-radius:8px; padding:1rem 1.25rem; margin-bottom:0.75rem; display:flex; align-items:center; gap:0.75rem;">
+            <span style="color:var(--color-orange); font-weight:700;">✓</span>
+            <span style="font-size:14.5px; color:#1c1c1c;">${d}</span>
+          </div>
+        `).join('');
+      }
+
+      const faqs = service.faqs || (['Assurance', 'Governance', 'MSSP'].includes(service.domain) ? [
+        { q: 'How long does the engagement take?', a: 'It depends on scope and size. We give a firm timeline after the scoping call, typically from a few days to a few weeks.' },
+        { q: 'Will testing affect our production systems?', a: 'Testing is planned to be non-disruptive. We agree on rules of engagement, windows and escalation contacts beforehand, and can test staging environments if you prefer.' },
+        { q: 'Do you provide a re-test after fixes?', a: 'Yes. We verify remediation and update the report to show which findings are closed.' },
+        { q: 'What do we receive at the end?', a: 'An executive summary, a detailed technical report with evidence and fix guidance, and a re-test report.' }
+      ] : null);
+
+      const fill = (wrapId, listId, items, html) => {
+        const wrap = document.getElementById(wrapId);
+        const has = items && items.length;
+        wrap.style.display = has ? 'block' : 'none';
+        document.getElementById(listId).innerHTML = has ? items.map(html).join('') : '';
+      };
+      fill('detailBenefitsWrap', 'detailBenefitsList', service.benefits, b => `
+        <div style="background:#ffffff; border:1px solid rgba(0,0,0,0.08); border-radius:8px; padding:1rem 1.25rem; margin-bottom:0.75rem; display:flex; align-items:center; gap:0.75rem;">
+          <span style="color:var(--color-orange); font-weight:700;">✓</span>
+          <span style="font-size:14.5px; color:#1c1c1c;">${b}</span>
+        </div>`);
+      fill('detailStandardsWrap', 'detailStandardsList', service.standards, s => `<span class="threat-pill">${s}</span>`);
+      fill('detailFaqWrap', 'detailFaqList', faqs, f => `
+        <details style="background:#ffffff; border:1px solid rgba(0,0,0,0.08); border-radius:8px; padding:1rem 1.25rem; margin-bottom:0.75rem;">
+          <summary style="cursor:pointer; font-weight:600; color:#1c1c1c;">${f.q}</summary>
+          <p style="margin:0.75rem 0 0; color:#4a4a54; line-height:1.65;">${f.a}</p>
+        </details>`);
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Filter by domain button clicks
+    document.querySelectorAll('.domain-filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.domain-filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.getAttribute('data-filter');
+        const searchVal = document.getElementById('catalogueSearch').value;
+        renderCatalogue(filter, searchVal);
+      });
+    });
+
+    // Search input
+    const searchInp = document.getElementById('catalogueSearch');
+    if (searchInp) {
+      searchInp.addEventListener('input', (e) => {
+        const activeBtn = document.querySelector('.domain-filter-btn.active');
+        const filter = activeBtn ? activeBtn.getAttribute('data-filter') : 'all';
+        renderCatalogue(filter, e.target.value);
+      });
+    }
+
+    window.filterByDomain = function(domain) {
+      document.querySelectorAll('.domain-filter-btn').forEach(b => {
+        if (b.getAttribute('data-filter') === domain) b.classList.add('active');
+        else b.classList.remove('active');
+      });
+      renderCatalogue(domain, '');
+    };
+  </script>
+</body>
+</html>

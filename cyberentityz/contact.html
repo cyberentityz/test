@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — CYBERENTITYZ™</title>
+  <meta name="description" content="Get in touch with CYBERENTITYZ. Enterprise penetration testing, college MOUs, cybersecurity certifications, and 24/7 incident response hotline.">
+  <link rel="icon" type="image/jpeg" href="images/logo.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,400&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body.contact-page-body {
+      background: #0A0A0A;
+      color: #ffffff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+  </style>
+</head>
+<body class="contact-page-body">
+
+  <!-- TOP ANNOUNCEMENT BANNER -->
+  <aside class="top-announcement-strip" id="topAnnouncementStrip">
+    <div class="container announcement-center-wrap">
+      <span class="announcement-text-center">Welcome to International Biggest Cybersecurity and Ethical Hacking Society</span>
+    </div>
+  </aside>
+
+  <!-- ENTERPRISE NAVBAR (LIGHT FLOATING PILL MATCHING SCREENSHOT) -->
+  <header class="site-header-mega" id="siteHeader">
+    <div class="container nav-inner-wrap">
+      
+      <!-- Brand Logo (Official CYBERENTITYZ Logo) -->
+      <a href="index.html#hero" class="brand-monogram-box">
+        <img src="images/logo.jpeg" alt="CYBERENTITYZ Logo" class="brand-monogram-logo">
+        <div class="brand-titles">
+          <span class="brand-primary-name">CYBERENTITYZ<span class="sup-tm">™</span></span>
+        </div>
+      </a>
+
+      <!-- Navigation Links with Mega-Menus (Order: Assurance, Compliance, MSSP, Services) -->
+      <nav class="mega-nav-list" id="megaNavList">
+        <a href="index.html#about" class="nav-simple-link">About</a>
+
+        <!-- 1. ASSURANCE MEGA-MENU -->
+        <div class="nav-dropdown-item has-megamenu">
+          <button class="nav-trigger-btn" aria-expanded="false" onclick="toggleNavDropdown(this, event)">
+            <span>Assurance</span>
+            <svg class="chevron-svg" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1l4 4 4-4" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+          <div class="megamenu-panel megamenu-wide">
+            <div class="megamenu-grid-3">
+              <div class="megamenu-col">
+                <div class="megamenu-col-badge">SECURITY TESTING (VAPT)</div>
+                <ul class="megamenu-links-list">
+                  <li><a href="services.html?service=web-application-vapt">Web Application VAPT</a></li>
+                  <li><a href="services.html?service=mobile-app-security">Mobile App Security</a></li>
+                  <li><a href="services.html?service=api-security-testing">API Security Testing</a></li>
+                  <li><a href="services.html?service=cloud-security-testing">Cloud Security Assessment</a></li>
+                  <li><a href="services.html?service=network-security-testing">Network Security Audit</a></li>
+                  <li><a href="services.html?service=iot-penetration-testing">IoT Penetration Testing</a></li>
+                  <li><a href="services.html?service=ot-security-testing">OT / SCADA Security</a></li>
+                  <li><a href="services.html?service=database-penetration-testing">Database Penetration</a></li>
+                  <li><a href="services.html?service=wireless-security-testing">Wireless Security</a></li>
+                  <li><a href="services.html?service=crest-vapt">CREST VAPT</a></li>
+                </ul>
+              </div>
+              <div class="megamenu-col">
+                <div class="megamenu-col-badge">ADVANCED ASSESSMENT</div>
+                <ul class="megamenu-links-list">
+                  <li><a href="services.html?service=red-team-operations">Red Team Operations</a></li>
+                  <li><a href="services.html?service=ai-llm-security-testing">AI / LLM Security Audit</a></li>
+                  <li><a href="services.html?service=digital-forensics-incident-response">Digital Forensics</a></li>
+                  <li><a href="services.html?service=cyber-intelligence">Cyber Intelligence</a></li>
+                  <li><a href="services.html?service=secure-code-review">Secure Code Review</a></li>
+                  <li><a href="services.html?service=devsecops">DevSecOps</a></li>
+                  <li><a href="services.html?service=hardware-security">Hardware Security</a></li>
+                  <li><a href="services.html?service=thick-client-security">Thick Client Security</a></li>
+                  <li><a href="services.html?service=host-level-security">Host Level Security</a></li>
+                  <li><a href="services.html?service=automotive-vapt">Automotive VAPT</a></li>
+                  <li><a href="services.html?service=telecom-vapt">Telecom VAPT</a></li>
+                </ul>
+              </div>
+              <div class="megamenu-col">
+                <div class="megamenu-col-badge">DATA &amp; PRIVACY</div>
+                <ul class="megamenu-links-list">
+                  <li><a href="services.html?service=data-security-audit">Data Security Audit</a></li>
+                  <li><a href="services.html?service=data-privacy-audit">Data Privacy Audit</a></li>
+                  <li><a href="services.html?service=data-masking-privacy">Data Masking &amp; Privacy</a></li>
+                  <li><a href="services.html?service=dspm">DSPM</a></li>
+                  <li><a href="services.html?service=data-breach-simulation">Data Breach Simulation</a></li>
+                  <li><a href="services.html?service=sbom-sca">SBOM &amp; SCA</a></li>
+                  <li><a href="services.html?service=website-security">Website Security</a></li>
+                  <li><a href="services.html" class="megamenu-see-all">All Assurance Services →</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="megamenu-bottom-bar">
+              <span class="megamenu-bottom-hint">End-to-end offensive security testing &amp; vulnerability management.</span>
+              <a href="services.html" class="megamenu-bottom-btn">All Assurance Services ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. COMPLIANCE MEGA-MENU -->
+        <div class="nav-dropdown-item has-megamenu">
+          <button class="nav-trigger-btn" aria-expanded="false" onclick="toggleNavDropdown(this, event)">
+            <span>Compliance</span>
+            <svg class="chevron-svg" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1l4 4 4-4" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+          <div class="megamenu-panel megamenu-wide">
+            <div class="megamenu-grid-3">
+              <div class="megamenu-col">
+                <div class="megamenu-col-badge">COMPLIANCE FRAMEWORKS</div>
+                <ul class="megamenu-links-list">
+                  <li><a href="services.html?service=iso-27001">ISO 27001:2022</a></li>
+                  <li><a href="services.html?service=soc-2-compliance">SOC 2</a></li>
+                  <li><a href="services.html?service=pci-dss">PCI-DSS</a></li>
+                  <li><a href="services.html?service=hipaa">HIPAA</a></li>
+                  <li><a href="services.html?service=gdpr">GDPR</a></li>
+                  <li><a href="services.html?service=dpdpa-compliance">DPDPA</a></li>
+                  <li><a href="services.html?service=nist-csf">NIST CSF</a></li>
+                  <li><a href="services.html?service=irdai">IRDAI</a></li>
+                  <li><a href="services.html?service=iso-22301">ISO 22301 (BCP)</a></li>
+                  <li><a href="services.html?service=iso-42001">ISO 42001 (AI)</a></li>
+                  <li><a href="services.html?service=iec-62443">IEC 62443 (OT)</a></li>
+                  <li><a href="services.html?service=iso-21434">ISO 21434 (Automotive)</a></li>
+                </ul>
+              </div>
+              <div class="megamenu-col">
+                <div class="megamenu-col-badge">GRC SERVICES</div>
+                <ul class="megamenu-links-list">
+                  <li><a href="services.html?service=grc-framework">GRC Framework</a></li>
+                  <li><a href="services.html?service=cyber-risk-assessment">Cyber Risk Assessment</a></li>
+                  <li><a href="services.html?service=third-party-risk-management">Third-Party Risk (TPRM)</a></li>
+                  <li><a href="services.html?service=data-privacy-compliance">Data Privacy Compliance</a></li>
+                  <li><a href="services.html?service=data-retention-policy">Data Retention Policy</a></li>
+                  <li><a href="services.html?service=national-security-compliance">National Security Compliance</a></li>
+                  <li><a href="services.html?service=cyber-insurance">Cybersecurity Insurance</a></li>
+                  <li><a href="services.html" class="megamenu-see-all">All Compliance →</a></li>
+                </ul>
+              </div>
+              <div class="megamenu-col">
+                <div class="megamenu-col-badge">CERTIFICATIONS</div>
+                <ul class="megamenu-links-list">
+                  <li><a href="index.html#certifications">CompTIA (Security+, CySA+)</a></li>
+                  <li><a href="index.html#certifications">EC-Council (CEH, CPENT, CHFI)</a></li>
+                  <li><a href="index.html#certifications">OffSec (OSCP, OSEP, OSDA)</a></li>
+                  <li><a href="index.html#certifications">ISC² (CISSP, CCSP)</a></li>
+                  <li><a href="index.html#certifications">ISACA (CISA, CISM)</a></li>
+                  <li><a href="index.html#certifications">Cisco CyberOps Associate</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="megamenu-bottom-bar">
+              <span class="megamenu-bottom-hint">Regulatory compliance, GRC frameworks &amp; risk management programs.</span>
+              <a href="services.html" class="megamenu-bottom-btn">All Compliance Services ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. MSSP MEGA-MENU -->
+        <div class="nav-dropdown-item has-megamenu">
+          <button class="nav-trigger-btn" aria-expanded="false" onclick="toggleNavDropdown(this, event)">
+            <span>MSSP</span>
+            <svg class="chevron-svg" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1l4 4 4-4" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+          <div class="megamenu-panel megamenu-wide">
+            <div class="megamenu-grid-3">
+              <div class="megamenu-col">
+                <div class="megamenu-col-badge">MANAGED SECURITY</div>
+                <ul class="megamenu-links-list">
+                  <li><a href="services.html?service=mssp">Managed Security (MSSP)</a></li>
+                  <li><a href="services.html?service=soc-as-a-service">SOC as a Service</a></li>
+                  <li><a href="services.html?service=vciso-advisory">V-CISO</a></li>
+                  <li><a href="services.html?service=incident-response">Incident Response</a></li>
+                  <li><a href="services.html?service=virtual-security-team">Virtual Security Team</a></li>
+                </ul>
+              </div>
+              <div class="megamenu-col">
+                <div class="megamenu-col-badge">CONTINUOUS MONITORING</div>
+                <ul class="megamenu-links-list">
+                  <li><a href="services.html?service=soar-integration">SOAR Integration</a></li>
+                  <li><a href="services.html?service=security-monitoring">Security Monitoring</a></li>
+                  <li><a href="services.html?service=threat-intelligence-platform">Threat Intelligence Platform</a></li>
+                  <li><a href="services.html?service=cyber-threat-intelligence">Cyber Threat Intelligence</a></li>
+                  <li><a href="services.html?service=lateral-movement-detection">Lateral Movement Detection</a></li>
+                  <li><a href="services.html?service=pentest-as-service">Penetration Test as Service</a></li>
+                </ul>
+              </div>
+              <div class="megamenu-col">
+                <div class="megamenu-col-badge">DEFENSIVE OPS</div>
+                <ul class="megamenu-links-list">
+                  <li><a href="services.html?service=perimeter-security">Perimeter Security</a></li>
+                  <li><a href="services.html?service=access-control-review">Access Control Review</a></li>
+                  <li><a href="services.html?service=cloud-config-review">Cloud Config Review</a></li>
+                  <li><a href="services.html?service=cdn-security">CDN Security</a></li>
+                  <li><a href="services.html?service=network-architecture">Network Architecture</a></li>
+                  <li><a href="services.html?service=cloud-security-management">Cloud Security Management</a></li>
+                  <li><a href="services.html?service=virtualization-security">Virtualization Security</a></li>
+                  <li><a href="services.html" class="megamenu-see-all">All MSSP Services →</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="megamenu-bottom-bar">
+              <span class="megamenu-bottom-hint">24/7 managed security operations, monitoring &amp; defensive infrastructure.</span>
+              <a href="services.html" class="megamenu-bottom-btn">All MSSP Services ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. SERVICES MEGA-MENU -->
+        <div class="nav-dropdown-item has-megamenu">
+          <button class="nav-trigger-btn" aria-expanded="false" onclick="toggleNavDropdown(this, event)">
+            <span>Services</span>
+            <svg class="chevron-svg" viewBox="0 0 10 6" fill="none" stroke="currentColor"><path d="M1 1l4 4 4-4" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+          <div class="megamenu-panel">
+            <div class="megamenu-grid-3">
+              <!-- DOMAIN 1: WORKSHOPS & ACADEMIC -->
+              <div class="megamenu-col">
+                <div class="megamenu-col-badge">TRAINING &amp; ACADEMIC</div>
+                <h4 class="megamenu-col-heading">Workshops &amp; Labs</h4>
+                <p class="megamenu-col-sub">Practical ethical hacking, industrial visits &amp; lab infrastructure</p>
+                <ul class="megamenu-links-list">
+                  <li><a href="services.html?service=cybersecurity-workshops">Cybersecurity Workshops</a></li>
+                  <li><a href="services.html?service=industrial-visits">Industrial Visits (IV)</a></li>
+                  <li><a href="services.html?service=internship-programs">Internship Programs</a></li>
+                  <li><a href="services.html?service=career-guidance-mock-interviews">Career Guidance &amp; Mocks</a></li>
+                  <li><a href="services.html?service=college-lab-setup-support">College Lab Setup Support</a></li>
+                  <li><a href="services.html?service=faculty-awareness-programs">Faculty Awareness Programs</a></li>
+                </ul>
+              </div>
+
+              <!-- DOMAIN 2: CORPORATE DEFENSE & VAPT -->
+              <div class="megamenu-col">
+                <div class="megamenu-col-badge">ENTERPRISE SECURITY</div>
+                <h4 class="megamenu-col-heading">Corporate Defense</h4>
+                <p class="megamenu-col-sub">Real-world attack simulations, VAPT &amp; executive advisory</p>
+                <ul class="megamenu-links-list">
+                  <li><a href="services.html?service=ethical-hacking-training">Ethical Hacking Society</a></li>
+                  <li><a href="services.html?service=vapt-services">VAPT &amp; Pen-Testing</a></li>
+                  <li><a href="services.html?service=vapt-services">Corporate Security Sessions</a></li>
+                  <li><a href="services.html?service=vciso-advisory">vCISO &amp; Governance</a></li>
+                  <li><a href="services.html?service=college-lab-setup-support">Collegiate Academic MOUs</a></li>
+                </ul>
+              </div>
+
+              <!-- DOMAIN 3: GLOBAL CERTIFICATIONS -->
+              <div class="megamenu-col">
+                <div class="megamenu-col-badge">GLOBAL CERTIFICATIONS</div>
+                <h4 class="megamenu-col-heading">Certification Training</h4>
+                <p class="megamenu-col-sub">Accredited bootcamps mapped to international standards</p>
+                <ul class="megamenu-links-list">
+                  <li><a href="index.html#certifications">CompTIA (Security+, CySA+, CASP+)</a></li>
+                  <li><a href="index.html#certifications">EC-Council (CEH, CPENT, CHFI)</a></li>
+                  <li><a href="index.html#certifications">OffSec (OSCP, OSEP, OSDA)</a></li>
+                  <li><a href="index.html#certifications">ISC² · ISACA (CISSP, CCSP, CISA)</a></li>
+                  <li><a href="index.html#certifications">Cisco CyberOps Associate</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Bottom Quick Bar -->
+            <div class="megamenu-bottom-bar">
+              <span class="megamenu-bottom-hint">Delivering world-class cybersecurity training and enterprise solutions from Chennai to the world.</span>
+              <a href="services.html" class="megamenu-bottom-btn">Explore All Services &amp; Practices ↗</a>
+            </div>
+          </div>
+        </div>
+        <a href="index.html#works" class="nav-simple-link">Works</a>
+        <a href="index.html#certifications" class="nav-simple-link">Certifications</a>
+        <a href="index.html#why" class="nav-simple-link">Why Us</a>
+        <a href="index.html#testimonials" class="nav-simple-link">Reviews</a>
+        <a href="index.html#trustedBy" class="nav-simple-link">Trusted By</a>
+        <a href="contact.html" class="nav-simple-link active">Contact</a>
+      </nav>
+
+      <!-- Nav CTA Button (Orange Pill with Dark Arrow Circle) -->
+      <div class="nav-cta-actions">
+        <a href="#contact" class="btn-book-call">
+          <span class="btn-text-full">Book a call</span>
+          <span class="btn-text-mobile">Contact</span>
+          <span class="pill-circle-dark"><svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 7h12M8 2l5 5-5 5"/></svg></span>
+        </a>
+        <button class="mobile-hamburger" id="mobileHamburger" aria-label="Toggle menu" onclick="openMobileMenu()">
+          <span class="ham-line"></span>
+          <span class="ham-line"></span>
+          <span class="ham-line"></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MOBILE MENU MODAL (MATCHING IMAGES 1 & 2) -->
+    <!-- MOBILE MENU MODAL (ACCORDION DRAWER - EXACT MATCH TO USER REFERENCE) -->
+  <div class="mobile-menu-backdrop" id="mobileMenuBackdrop" onclick="closeMobileMenu()"></div>
+  <div class="mobile-menu-card" id="mobileMenuCard" role="dialog" aria-modal="true" aria-label="Navigation Menu">
+    <div class="mobile-menu-header">
+      <a href="index.html#hero" class="mobile-brand-box" onclick="closeMobileMenu()">
+        <img src="images/logo.jpeg" alt="CYBERENTITYZ Logo" class="mobile-brand-logo">
+        <span class="mobile-brand-name">CYBERENTITYZ</span>
+      </a>
+      <button type="button" class="mobile-menu-close-btn" id="mobileMenuClose" onclick="closeMobileMenu()" aria-label="Close menu">
+        <svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M3 3l10 10M13 3L3 13"/></svg>
+      </button>
+    </div>
+
+    <div class="mobile-menu-nav-scroll">
+      <!-- QUICK CONTACT ACTION (VISIBLE IMMEDIATELY ON MOBILE DRAWER OPEN) -->
+      <div class="mobile-menu-quick-contact">
+        <a href="contact.html" class="mobile-quick-contact-btn" onclick="closeMobileMenu()">
+          <div class="mobile-quick-contact-left">
+            <span class="mobile-quick-badge">READY TO SECURE?</span>
+            <span class="mobile-quick-title">Contact Our Security Team</span>
+          </div>
+          <span class="mobile-quick-arrow">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 7h12M8 2l5 5-5 5"/></svg>
+          </span>
+        </a>
+      </div>
+      <!-- 1. ABOUT US ACCORDION -->
+      <div class="mobile-accordion-item">
+        <button type="button" class="mobile-accordion-header" onclick="toggleMobileAccordion(this)">
+          <span>About Us</span>
+          <svg class="mobile-accordion-chevron" viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M1 1.5l5 5 5-5"/></svg>
+        </button>
+        <div class="mobile-accordion-body">
+          <a href="index.html#about" class="mobile-sublink" onclick="closeMobileMenu()">About Cyberentityz →</a>
+          <a href="index.html#why" class="mobile-sublink" onclick="closeMobileMenu()">Why Choose Us</a>
+          <a href="index.html#works" class="mobile-sublink" onclick="closeMobileMenu()">Works &amp; Case Studies</a>
+          <a href="index.html#testimonials" class="mobile-sublink" onclick="closeMobileMenu()">Client Reviews</a>
+          <a href="index.html#trustedBy" class="mobile-sublink" onclick="closeMobileMenu()">Trusted Partners</a>
+        </div>
+      </div>
+
+      <!-- 2. ASSURANCE ACCORDION (MATCHING USER REFERENCE) -->
+      <div class="mobile-accordion-item active">
+        <button type="button" class="mobile-accordion-header" onclick="toggleMobileAccordion(this)">
+          <span>Assurance</span>
+          <svg class="mobile-accordion-chevron" viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M1 1.5l5 5 5-5"/></svg>
+        </button>
+        <div class="mobile-accordion-body">
+          <span class="mobile-sub-badge">SECURITY TESTING (VAPT)</span>
+          <a href="services.html?service=web-application-vapt" class="mobile-sublink" onclick="closeMobileMenu()">Web Application VAPT →</a>
+          <a href="services.html?service=mobile-app-security" class="mobile-sublink" onclick="closeMobileMenu()">Mobile App Security</a>
+          <a href="services.html?service=api-security-testing" class="mobile-sublink" onclick="closeMobileMenu()">API Security Testing</a>
+          <a href="services.html?service=cloud-security-testing" class="mobile-sublink" onclick="closeMobileMenu()">Cloud Security Assessment</a>
+          <a href="services.html?service=network-security-testing" class="mobile-sublink" onclick="closeMobileMenu()">Network Security Audit</a>
+          <a href="services.html?service=iot-penetration-testing" class="mobile-sublink" onclick="closeMobileMenu()">IoT Penetration Testing</a>
+          <a href="services.html?service=ot-security-testing" class="mobile-sublink" onclick="closeMobileMenu()">OT / SCADA Security</a>
+          <a href="services.html?service=database-penetration-testing" class="mobile-sublink" onclick="closeMobileMenu()">Database Penetration</a>
+          <a href="services.html?service=wireless-security-testing" class="mobile-sublink" onclick="closeMobileMenu()">Wireless Security</a>
+          <a href="services.html?service=crest-vapt" class="mobile-sublink" onclick="closeMobileMenu()">CREST VAPT</a>
+
+          <span class="mobile-sub-badge">ADVANCED ASSESSMENT</span>
+          <a href="services.html?service=red-team-operations" class="mobile-sublink" onclick="closeMobileMenu()">Red Team Operations</a>
+          <a href="services.html?service=ai-llm-security-testing" class="mobile-sublink" onclick="closeMobileMenu()">AI / LLM Security Audit</a>
+          <a href="services.html?service=digital-forensics-incident-response" class="mobile-sublink" onclick="closeMobileMenu()">Digital Forensics (DFIR)</a>
+          <a href="services.html?service=cyber-intelligence" class="mobile-sublink" onclick="closeMobileMenu()">Cyber Intelligence</a>
+          <a href="services.html?service=secure-code-review" class="mobile-sublink" onclick="closeMobileMenu()">Secure Code Review</a>
+          <a href="services.html?service=devsecops" class="mobile-sublink" onclick="closeMobileMenu()">DevSecOps</a>
+          <a href="services.html?service=hardware-security" class="mobile-sublink" onclick="closeMobileMenu()">Hardware Security</a>
+          <a href="services.html?service=thick-client-security" class="mobile-sublink" onclick="closeMobileMenu()">Thick Client Security</a>
+          <a href="services.html?service=host-level-security" class="mobile-sublink" onclick="closeMobileMenu()">Host Level Security</a>
+          <a href="services.html?service=automotive-vapt" class="mobile-sublink" onclick="closeMobileMenu()">Automotive VAPT</a>
+          <a href="services.html?service=telecom-vapt" class="mobile-sublink" onclick="closeMobileMenu()">Telecom VAPT</a>
+
+          <span class="mobile-sub-badge">DATA &amp; PRIVACY</span>
+          <a href="services.html?service=data-security-audit" class="mobile-sublink" onclick="closeMobileMenu()">Data Security Audit</a>
+          <a href="services.html?service=data-privacy-audit" class="mobile-sublink" onclick="closeMobileMenu()">Data Privacy Audit</a>
+          <a href="services.html?service=data-masking-privacy" class="mobile-sublink" onclick="closeMobileMenu()">Data Masking &amp; Privacy</a>
+          <a href="services.html?service=dspm" class="mobile-sublink" onclick="closeMobileMenu()">DSPM</a>
+          <a href="services.html?service=data-breach-simulation" class="mobile-sublink" onclick="closeMobileMenu()">Data Breach Simulation</a>
+          <a href="services.html?service=sbom-sca" class="mobile-sublink" onclick="closeMobileMenu()">SBOM &amp; SCA</a>
+          <a href="services.html?service=website-security" class="mobile-sublink" onclick="closeMobileMenu()">Website Security</a>
+          <a href="services.html" class="mobile-sublink mobile-sublink-see-all" onclick="closeMobileMenu()">All Assurance Services →</a>
+        </div>
+      </div>
+
+      <!-- 3. COMPLIANCE ACCORDION -->
+      <div class="mobile-accordion-item">
+        <button type="button" class="mobile-accordion-header" onclick="toggleMobileAccordion(this)">
+          <span>Compliance</span>
+          <svg class="mobile-accordion-chevron" viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M1 1.5l5 5 5-5"/></svg>
+        </button>
+        <div class="mobile-accordion-body">
+          <span class="mobile-sub-badge">COMPLIANCE FRAMEWORKS</span>
+          <a href="services.html?service=iso-27001" class="mobile-sublink" onclick="closeMobileMenu()">ISO 27001:2022</a>
+          <a href="services.html?service=soc-2-compliance" class="mobile-sublink" onclick="closeMobileMenu()">SOC 2</a>
+          <a href="services.html?service=pci-dss" class="mobile-sublink" onclick="closeMobileMenu()">PCI-DSS</a>
+          <a href="services.html?service=hipaa" class="mobile-sublink" onclick="closeMobileMenu()">HIPAA</a>
+          <a href="services.html?service=gdpr" class="mobile-sublink" onclick="closeMobileMenu()">GDPR</a>
+          <a href="services.html?service=dpdpa-compliance" class="mobile-sublink" onclick="closeMobileMenu()">DPDPA</a>
+          <a href="services.html?service=nist-csf" class="mobile-sublink" onclick="closeMobileMenu()">NIST CSF</a>
+          <a href="services.html?service=irdai" class="mobile-sublink" onclick="closeMobileMenu()">IRDAI</a>
+          <a href="services.html?service=iso-22301" class="mobile-sublink" onclick="closeMobileMenu()">ISO 22301 (BCP)</a>
+          <a href="services.html?service=iso-42001" class="mobile-sublink" onclick="closeMobileMenu()">ISO 42001 (AI)</a>
+          <a href="services.html?service=iec-62443" class="mobile-sublink" onclick="closeMobileMenu()">IEC 62443 (OT)</a>
+          <a href="services.html?service=iso-21434" class="mobile-sublink" onclick="closeMobileMenu()">ISO 21434 (Automotive)</a>
+
+          <span class="mobile-sub-badge">GRC SERVICES</span>
+          <a href="services.html?service=grc-framework" class="mobile-sublink" onclick="closeMobileMenu()">GRC Framework</a>
+          <a href="services.html?service=cyber-risk-assessment" class="mobile-sublink" onclick="closeMobileMenu()">Cyber Risk Assessment</a>
+          <a href="services.html?service=third-party-risk-management" class="mobile-sublink" onclick="closeMobileMenu()">Third-Party Risk (TPRM)</a>
+          <a href="services.html?service=data-privacy-compliance" class="mobile-sublink" onclick="closeMobileMenu()">Data Privacy Compliance</a>
+          <a href="services.html?service=data-retention-policy" class="mobile-sublink" onclick="closeMobileMenu()">Data Retention Policy</a>
+          <a href="services.html?service=national-security-compliance" class="mobile-sublink" onclick="closeMobileMenu()">National Security Compliance</a>
+          <a href="services.html?service=cyber-insurance" class="mobile-sublink" onclick="closeMobileMenu()">Cybersecurity Insurance</a>
+          <a href="services.html" class="mobile-sublink mobile-sublink-see-all" onclick="closeMobileMenu()">All Compliance Services →</a>
+        </div>
+      </div>
+
+      <!-- 4. MSSP ACCORDION -->
+      <div class="mobile-accordion-item">
+        <button type="button" class="mobile-accordion-header" onclick="toggleMobileAccordion(this)">
+          <span>MSSP</span>
+          <svg class="mobile-accordion-chevron" viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M1 1.5l5 5 5-5"/></svg>
+        </button>
+        <div class="mobile-accordion-body">
+          <span class="mobile-sub-badge">MANAGED SECURITY</span>
+          <a href="services.html?service=mssp" class="mobile-sublink" onclick="closeMobileMenu()">Managed Security (MSSP)</a>
+          <a href="services.html?service=soc-as-a-service" class="mobile-sublink" onclick="closeMobileMenu()">SOC as a Service</a>
+          <a href="services.html?service=vciso-advisory" class="mobile-sublink" onclick="closeMobileMenu()">V-CISO</a>
+          <a href="services.html?service=incident-response" class="mobile-sublink" onclick="closeMobileMenu()">Incident Response</a>
+          <a href="services.html?service=virtual-security-team" class="mobile-sublink" onclick="closeMobileMenu()">Virtual Security Team</a>
+
+          <span class="mobile-sub-badge">CONTINUOUS MONITORING</span>
+          <a href="services.html?service=soar-integration" class="mobile-sublink" onclick="closeMobileMenu()">SOAR Integration</a>
+          <a href="services.html?service=security-monitoring" class="mobile-sublink" onclick="closeMobileMenu()">Security Monitoring</a>
+          <a href="services.html?service=threat-intelligence-platform" class="mobile-sublink" onclick="closeMobileMenu()">Threat Intelligence Platform</a>
+          <a href="services.html?service=cyber-threat-intelligence" class="mobile-sublink" onclick="closeMobileMenu()">Cyber Threat Intelligence</a>
+          <a href="services.html?service=lateral-movement-detection" class="mobile-sublink" onclick="closeMobileMenu()">Lateral Movement Detection</a>
+          <a href="services.html?service=pentest-as-service" class="mobile-sublink" onclick="closeMobileMenu()">Penetration Test as Service</a>
+
+          <span class="mobile-sub-badge">DEFENSIVE OPS</span>
+          <a href="services.html?service=perimeter-security" class="mobile-sublink" onclick="closeMobileMenu()">Perimeter Security</a>
+          <a href="services.html?service=access-control-review" class="mobile-sublink" onclick="closeMobileMenu()">Access Control Review</a>
+          <a href="services.html?service=cloud-config-review" class="mobile-sublink" onclick="closeMobileMenu()">Cloud Config Review</a>
+          <a href="services.html?service=cdn-security" class="mobile-sublink" onclick="closeMobileMenu()">CDN Security</a>
+          <a href="services.html?service=network-architecture" class="mobile-sublink" onclick="closeMobileMenu()">Network Architecture</a>
+          <a href="services.html?service=cloud-security-management" class="mobile-sublink" onclick="closeMobileMenu()">Cloud Security Management</a>
+          <a href="services.html?service=virtualization-security" class="mobile-sublink" onclick="closeMobileMenu()">Virtualization Security</a>
+          <a href="services.html" class="mobile-sublink mobile-sublink-see-all" onclick="closeMobileMenu()">All MSSP Services →</a>
+        </div>
+      </div>
+
+      <!-- 5. SERVICES ACCORDION -->
+      <div class="mobile-accordion-item">
+        <button type="button" class="mobile-accordion-header" onclick="toggleMobileAccordion(this)">
+          <span>Services</span>
+          <svg class="mobile-accordion-chevron" viewBox="0 0 12 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M1 1.5l5 5 5-5"/></svg>
+        </button>
+        <div class="mobile-accordion-body">
+          <span class="mobile-sub-badge">TRAINING &amp; ACADEMIC</span>
+          <a href="services.html?service=cybersecurity-workshops" class="mobile-sublink" onclick="closeMobileMenu()">Cybersecurity Workshops</a>
+          <a href="services.html?service=industrial-visits" class="mobile-sublink" onclick="closeMobileMenu()">Industrial Visits (IV)</a>
+          <a href="services.html?service=internship-programs" class="mobile-sublink" onclick="closeMobileMenu()">Internship Programs</a>
+          <a href="services.html?service=career-guidance-mock-interviews" class="mobile-sublink" onclick="closeMobileMenu()">Career Guidance &amp; Mock Interviews</a>
+          <a href="services.html?service=college-lab-setup-support" class="mobile-sublink" onclick="closeMobileMenu()">College Lab Setup &amp; Support</a>
+          <a href="services.html?service=faculty-awareness-programs" class="mobile-sublink" onclick="closeMobileMenu()">Faculty Awareness Programs</a>
+          <a href="services.html?service=school-awareness-programs" class="mobile-sublink" onclick="closeMobileMenu()">School Awareness Programs</a>
+
+          <span class="mobile-sub-badge">ALL 80+ SERVICES</span>
+          <a href="services.html" class="mobile-sublink mobile-sublink-see-all" onclick="closeMobileMenu()">Explore All 80+ Cybersecurity Services →</a>
+        </div>
+      </div>
+
+      <!-- 6. DIRECT LINKS -->
+      <a href="index.html#certifications" class="mobile-direct-link" onclick="closeMobileMenu()">
+        <span>Certifications</span>
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 2l5 5-5 5"/></svg>
+      </a>
+      <a href="contact.html" class="mobile-direct-link" onclick="closeMobileMenu()">
+        <span>Contact Us</span>
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 2l5 5-5 5"/></svg>
+      </a>
+
+      <!-- 7. CTA BUTTON -->
+      <div class="mobile-menu-cta-wrap">
+        <a href="contact.html" class="mobile-menu-book-btn" onclick="closeMobileMenu()">
+          <span>Book a Consultation</span>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M1 7h12M8 2l5 5-5 5"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <main style="flex-grow: 1;">
+    
+    <!-- KATOM CONTACT SECTION (EXACT MATCH TO USER SCREENSHOT 2) -->
+    <section class="katom-contact-section" id="contact">
+      <div class="container">
+        
+        <!-- Big Display Header (LET'S TALK) -->
+        <h1 class="katom-huge-headline">LET'S TALK</h1>
+
+        <!-- Two-Column Split Layout -->
+        <div class="katom-split-grid">
+          
+          <!-- Left Column: Context & Direct Contact -->
+          <div class="katom-left-col">
+            <span class="katom-kicker">SECURE YOUR INFRASTRUCTURE</span>
+            <h2 class="katom-subhead">Ready to strengthen your security?</h2>
+            <p class="katom-body-text">
+              Tell us about your security needs, infrastructure, or challenges. We'll help you find the right way forward with CYBERENTITYZ.
+            </p>
+
+            <div class="katom-contact-pills">
+              <a href="tel:+919500551090" class="katom-pill-item">
+                <span class="katom-pill-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </span>
+                <span class="katom-pill-label">+91 9500551090 · 24/7 Hotline</span>
+              </a>
+              <a href="mailto:info@cyberentityz.com" class="katom-pill-item">
+                <span class="katom-pill-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </span>
+                <span class="katom-pill-label">info@cyberentityz.com</span>
+              </a>
+              <div class="katom-pill-item">
+                <span class="katom-pill-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </span>
+                <span class="katom-pill-label">1st Floor, Kundan Complex, Parthasarathy Pettai St, Anna Salai, Teynampet, Chennai – 600 006</span>
+              </div>
+              <div class="katom-pill-item">
+                <span class="katom-pill-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+                </span>
+                <span class="katom-pill-label">Ethical Hacking Society · Chennai, Tamil Nadu</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Minimal Underline Form -->
+          <div class="katom-form-wrap">
+            <form onsubmit="handleKatomSubmit(event)" id="katomContactForm">
+              
+              <div class="katom-field-group">
+                <label class="katom-field-label">NAME</label>
+                <input type="text" class="katom-field-input" placeholder="Your name" required id="katomName">
+              </div>
+
+              <div class="katom-field-group">
+                <label class="katom-field-label">EMAIL</label>
+                <input type="email" class="katom-field-input" placeholder="you@company.com" required id="katomEmail">
+              </div>
+
+              <div class="katom-field-group">
+                <label class="katom-field-label">COMPANY / INSTITUTION</label>
+                <input type="text" class="katom-field-input" placeholder="Company or college name" id="katomCompany">
+              </div>
+
+              <div class="katom-field-group">
+                <label class="katom-field-label">WHAT CAN WE HELP YOU WITH?</label>
+                <textarea class="katom-field-textarea" placeholder="Tell us about your security needs..." rows="3" required id="katomMessage"></textarea>
+              </div>
+
+              <button type="submit" class="framer-arrow-fill-btn" id="katomSubmitBtn" style="width:100%; border:none;">
+                <span>Talk to CYBERENTITYZ</span>
+                <span class="arrow-badge">
+                  <svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 7h12M8 2l5 5-5 5"/></svg>
+                </span>
+              </button>
+
+              <p class="katom-disclaimer">Your information is used only to respond to your request.</p>
+
+              <div id="katomFeedback" style="display:none; margin-top:1.5rem; padding:1rem 1.25rem; border-radius:12px; font-family:var(--font-mono); font-size:13px; text-align:center;"></div>
+
+            </form>
+          </div>
+
+        </div>
+
+        <!-- Sleek Full-Width Tactical Map Showcase (Aligned Perfectly) -->
+        <div class="katom-map-showcase">
+          <div class="katom-map-header">
+            <div class="katom-map-header-left">
+              <span class="katom-map-live-dot"></span>
+              <span class="katom-map-hq-title">CYBERENTITYZ TACTICAL HEADQUARTERS &amp; SOC LAB</span>
+            </div>
+            <div class="katom-map-header-right">
+              <span class="katom-map-coords">13.0483° N, 80.2497° E · Anna Salai, Teynampet, Chennai</span>
+              <a href="https://maps.google.com/?q=CYBERENTITYZ+Chennai" target="_blank" rel="noopener" class="katom-map-external-link">Open in Google Maps ↗</a>
+            </div>
+          </div>
+          <div class="katom-map-viewport">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.8014043032463!2d80.2497245!3d13.0483096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526743486550eb%3A0x4b0433d47aa9c053!2sCYBERENTITYZ!5e0!3m2!1sen!2sin!4v1794895530935!5m2!1sen!2sin" width="100%" height="350" style="border:0; display:block;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ENTERPRISE FOOTER (EXACT MATCH TO NORD CONSULTING / IMAGE 4) -->
+  <footer class="nord-enterprise-footer" id="siteFooter">
+    <div class="container">
+      
+      <!-- Top Row: Newsletter Brief (Left) + 3-4 Practice Columns (Right) -->
+      <div class="nord-footer-top-row">
+        
+        <!-- Left Column: The CYBERENTITYZ Brief & Subscribe Form -->
+        <div class="nord-footer-brief-col">
+          <h3 class="nord-brief-heading">The CYBERENTITYZ™ Brief</h3>
+          <p class="nord-brief-sub">One considered idea for leaders, once a month.</p>
+          
+          <form class="nord-brief-form" onsubmit="event.preventDefault(); alert('Subscribed to The CYBERENTITYZ Brief!');">
+            <div class="nord-input-group">
+              <input type="email" placeholder="you@company.com" required class="nord-brief-input">
+              <button type="submit" class="nord-brief-btn">
+                <span>Subscribe</span>
+                <span class="nord-btn-arrow">
+                  <svg width="12" height="12" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 7h12M8 2l5 5-5 5"/></svg>
+                </span>
+              </button>
+            </div>
+          </form>
+          <span class="nord-brief-hint">NO SPAM. UNSUBSCRIBE ANYTIME.</span>
+        </div>
+
+        <!-- Right Columns: Practices, Firm, Contact -->
+        <div class="nord-footer-cols-wrap">
+          
+          <!-- Column 1: Practices -->
+          <div class="nord-footer-col">
+            <span class="nord-col-eyebrow">PRACTICES</span>
+            <ul class="nord-col-links">
+              <li><a href="services.html?service=web-application-vapt">Security Testing (VAPT)</a></li>
+              <li><a href="services.html?service=iso-27001">Governance &amp; GRC</a></li>
+              <li><a href="services.html?service=soc-as-a-service">Managed MSSP</a></li>
+              <li><a href="services.html?service=cybersecurity-workshops">Academic &amp; IV Training</a></li>
+              <li><a href="services.html?service=red-team-operations">Red Team Operations</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 2: Firm -->
+          <div class="nord-footer-col">
+            <span class="nord-col-eyebrow">FIRM</span>
+            <ul class="nord-col-links">
+              <li><a href="index.html#about">About</a></li>
+              <li><a href="index.html#works">Our Works</a></li>
+              <li><a href="index.html#certifications">Certifications</a></li>
+              <li><a href="index.html#why">Why Us</a></li>
+              <li><a href="index.html#testimonials">Reviews</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Contact & Connect -->
+          <div class="nord-footer-col">
+            <span class="nord-col-eyebrow">CONTACT</span>
+            <ul class="nord-col-links">
+              <li><a href="mailto:info@cyberentityz.com">info@cyberentityz.com</a></li>
+              <li><a href="tel:+919500551090">+91 9500551090</a></li>
+              <li><a href="contact.html">Chennai · Tamil Nadu</a></li>
+            </ul>
+            <span class="nord-col-eyebrow" style="margin-top:1.5rem; display:block;">CONNECT</span>
+            <ul class="nord-col-links">
+              <li><a href="https://www.linkedin.com/company/cyberentityz/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+              <li><a href="http://x.com/cyberentityz?s=21" target="_blank" rel="noopener noreferrer">X (Twitter)</a></li>
+              <li><a href="https://www.facebook.com/share/1CWFML5nvn/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+              <li><a href="https://www.instagram.com/cyberentityz?igsh=MTQ5aDdoNXQ0cWxqcA==" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+              <li><a href="https://chat.whatsapp.com/G7UeSNxGIh17lJVxgIIX0n" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Interactive Dotmark Halftone Canvas for CYBERENTITYZ (Matching Images 1 & 2) -->
+      <div class="nord-giant-brand-row dotmark-canvas-container" title="Move cursor to interact with CYBERENTITYZ dot marks">
+        <canvas id="dotmarkFooterCanvas"></canvas>
+      </div>
+
+      <!-- Bottom Meta Strip: Copyright on Left, Privacy/Terms/Back-to-top on Right -->
+      <div class="nord-footer-bottom-strip">
+        <div class="nord-copyright-text">
+          © 2026 CYBERENTITYZ Ltd · Registered in Chennai, Tamil Nadu
+        </div>
+        <div class="nord-footer-legal-links">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <button class="nord-back-top-link" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Back to top ↑</button>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    function handleKatomSubmit(e) {
+      e.preventDefault();
+      const btn = document.getElementById('katomSubmitBtn');
+      const fb = document.getElementById('katomFeedback');
+      btn.disabled = true;
+      btn.innerHTML = '<span>Transmitting...</span>';
+      setTimeout(() => {
+        btn.innerHTML = '<span>Transmitted Successfully ✓</span>';
+        btn.style.background = '#22c55e';
+        btn.style.color = '#ffffff';
+        fb.style.display = 'block';
+        fb.style.background = 'rgba(34, 197, 94, 0.15)';
+        fb.style.border = '1px solid rgba(34, 197, 94, 0.4)';
+        fb.style.color = '#4ade80';
+        fb.textContent = 'Transmission acknowledged. A CYBERENTITYZ lead specialist will contact you within 24 hours.';
+      }, 700);
+    }
+  </script>
+</body>
+</html>
