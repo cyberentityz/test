@@ -371,7 +371,7 @@
       display: grid;
       grid-template-columns: 1.45fr 0.92fr;
       gap: 4rem;
-      align-items: stretch !important;
+      align-items: start !important;
       position: relative;
     }
 
@@ -380,8 +380,12 @@
     }
 
     .sticky-consult-col {
-      position: relative;
-      height: 100%;
+      position: -webkit-sticky !important;
+      position: sticky !important;
+      top: 90px !important;
+      align-self: start !important;
+      height: fit-content !important;
+      z-index: 20 !important;
     }
 
     .threat-tag-cloud {
@@ -443,7 +447,7 @@
       top: 90px !important;
       box-shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
       align-self: start !important;
-      z-index: 20;
+      z-index: 20 !important;
     }
 
     @media (max-width: 1024px) {
@@ -456,12 +460,16 @@
       .services-grid-layout {
         grid-template-columns: repeat(2, 1fr);
       }
+    }
+
+    @media (max-width: 900px) {
       .detail-columns-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
       }
+      .sticky-consult-col,
       .sticky-consult-card {
-        position: relative;
-        top: 0;
+        position: static !important;
+        top: auto !important;
       }
     }
 
