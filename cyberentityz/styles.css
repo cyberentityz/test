@@ -57,7 +57,7 @@ html {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden !important;
+  overflow-x: clip !important;
   max-width: 100% !important;
   width: 100% !important;
   box-sizing: border-box;
@@ -65,7 +65,7 @@ html {
 
 body {
   min-height: 100vh;
-  overflow-x: hidden !important;
+  overflow-x: clip !important;
   max-width: 100% !important;
   width: 100% !important;
   position: relative;
@@ -5536,7 +5536,8 @@ button:hover .svg-rotate-45 {
   display: grid;
   grid-template-columns: 0.85fr 1.35fr;
   gap: 4.5rem;
-  align-items: start;
+  align-items: start !important;
+  position: relative;
 }
 
 .faq-partner-box {
@@ -5545,8 +5546,12 @@ button:hover .svg-rotate-45 {
   border-radius: 16px;
   padding: 2.5rem 2rem;
   color: #ffffff;
-  position: sticky;
-  top: 120px;
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 90px !important;
+  align-self: start !important;
+  height: fit-content !important;
+  z-index: 20 !important;
 }
 
 .faq-partner-profile {
@@ -7734,7 +7739,7 @@ button:hover .svg-rotate-45 {
   display: grid;
   grid-template-columns: 1.45fr 0.9fr;
   gap: 4rem;
-  align-items: stretch !important;
+  align-items: start !important;
   position: relative;
 }
 
@@ -7743,8 +7748,12 @@ button:hover .svg-rotate-45 {
 }
 
 .sticky-consult-col {
-  position: relative;
-  height: 100%;
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 90px !important;
+  align-self: start !important;
+  height: fit-content !important;
+  z-index: 20 !important;
 }
 
 .sticky-consult-card {
@@ -7757,7 +7766,7 @@ button:hover .svg-rotate-45 {
   top: 90px !important;
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
   align-self: start !important;
-  z-index: 20;
+  z-index: 20 !important;
 }
 
 /* ==========================================================================
@@ -8355,8 +8364,20 @@ img, video, canvas, svg { max-width: 100%; }
 @media (max-width: 1100px) {
   .about-lead-grid, .work-header-row, .practices-header-row, .practices-split-grid,
   .partners-header-row, .pricing-header-row, .insights-header-row, .faq-header-row,
-  .faq-split-layout, .contact-split-grid, .contact-card-box, .hero-split-grid,
-  .cases-two-col-grid, .katom-split-grid, .detail-columns-grid {
+  .contact-split-grid, .contact-card-box, .hero-split-grid,
+  .cases-two-col-grid, .katom-split-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2.5rem;
+  }
+  .partners-cards-grid, .nord-metric-cards-grid, .insights-cards-grid,
+  .trustwall-bento-grid, .bento-testimonials-grid, .footer-top-row, .footer-top-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .pricing-cards-grid, .reviews-three-col-grid { grid-template-columns: 1fr !important; }
+}
+
+@media (max-width: 900px) {
+  .faq-split-layout, .detail-columns-grid {
     grid-template-columns: 1fr !important;
     gap: 2.5rem;
   }
@@ -8364,11 +8385,6 @@ img, video, canvas, svg { max-width: 100%; }
     position: static !important;
     top: auto !important;
   }
-  .partners-cards-grid, .nord-metric-cards-grid, .insights-cards-grid,
-  .trustwall-bento-grid, .bento-testimonials-grid, .footer-top-row, .footer-top-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-  }
-  .pricing-cards-grid, .reviews-three-col-grid { grid-template-columns: 1fr !important; }
 }
 
 @media (max-width: 768px) {
@@ -10175,7 +10191,8 @@ img, video, canvas, svg { max-width: 100%; }
     width: 38px !important;
     height: 38px !important;
   }
-}
+}
+
 
 /* ==========================================================================
    MOBILE VIEW FIXES: WHY CHOOSE US 6 CARDS (FULL TEXT VISIBLE)
