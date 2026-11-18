@@ -1080,31 +1080,69 @@ window.toggleAlloyPanel = function(index, evt) {
 window.handleKatomSubmit = function(e) {
   e.preventDefault();
   const form = e.target;
-  const btn = form.querySelector('button[type="submit"]');
-  const fb = form.querySelector('[id$="Feedback"]');
+  const name = form.querySelector('#katomName') ? form.querySelector('#katomName').value.trim() : '';
+  const email = form.querySelector('#katomEmail') ? form.querySelector('#katomEmail').value.trim() : '';
+  const phone = form.querySelector('#katomPhone') ? form.querySelector('#katomPhone').value.trim() : '';
+  const company = form.querySelector('#katomCompany') ? form.querySelector('#katomCompany').value.trim() : '';
+  const message = form.querySelector('#katomMessage') ? form.querySelector('#katomMessage').value.trim() : '';
+
+  const btn = form.querySelector('button[type="submit"]') || document.getElementById('katomSubmitBtn');
+  const fb = form.querySelector('[id$="Feedback"]') || document.getElementById('katomFeedback');
+
+  // Build structured WhatsApp message
+  let text = `*New Contact Inquiry - CYBERENTITYZ*\n\n` +
+             `👤 *Name:* ${name}\n` +
+             `📧 *Email:* ${email}\n`;
+  if (phone) {
+    text += `📱 *Phone / WhatsApp:* ${phone}\n`;
+  }
+  if (company) {
+    text += `🏢 *Company / Institution:* ${company}\n`;
+  }
+  text += `\n💬 *Requirement / Message:*\n${message}\n\n` +
+          `──────────────────\n` +
+          `Sent from cyberentityz.com/contact.html`;
+
+  const encodedText = encodeURIComponent(text);
+  const waNumber = '919500551090';
+  const waUrl = `https://api.whatsapp.com/send?phone=${waNumber}&text=${encodedText}`;
+
   if (btn) {
     btn.disabled = true;
-    const oldText = btn.innerHTML;
-    btn.innerHTML = '<span>Transmitting...</span>';
+    btn.innerHTML = '<span>Opening WhatsApp...</span>';
+    btn.style.background = '#25D366';
+    btn.style.color = '#ffffff';
+  }
+
+  if (fb) {
+    fb.style.display = 'block';
+    fb.style.background = 'rgba(37, 211, 102, 0.12)';
+    fb.style.border = '1px solid rgba(37, 211, 102, 0.4)';
+    fb.style.color = '#4ade80';
+    fb.innerHTML = `✓ Connecting to CYBERENTITYZ official WhatsApp (+91 9500551090)...<br><a href="${waUrl}" target="_blank" rel="noopener noreferrer" style="display:inline-block; margin-top:8px; color:#ffffff; font-weight:600; text-decoration:underline;">Click here if WhatsApp didn't open automatically →</a>`;
+  }
+
+  const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+  setTimeout(() => {
+    if (btn) {
+      btn.innerHTML = '<span>Opened in WhatsApp ✓</span>';
+    }
+    if (isMobile) {
+      window.location.href = waUrl;
+    } else {
+      window.open(waUrl, '_blank');
+    }
+
     setTimeout(() => {
-      btn.innerHTML = '<span>Transmitted Successfully ✓</span>';
-      btn.style.background = '#22c55e';
-      btn.style.color = '#ffffff';
-      if (fb) {
-        fb.style.display = 'block';
-        fb.style.background = 'rgba(34, 197, 94, 0.15)';
-        fb.style.border = '1px solid rgba(34, 197, 94, 0.4)';
-        fb.style.color = '#4ade80';
-        fb.textContent = 'Transmission acknowledged. A CYBERENTITYZ specialist will respond within 24 hours.';
-      }
-      setTimeout(() => {
+      if (btn) {
         btn.disabled = false;
-        btn.innerHTML = oldText;
+        btn.innerHTML = `<span>Talk to CYBERENTITYZ</span><span class="arrow-badge"><svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 7h12M8 2l5 5-5 5"/></svg></span>`;
         btn.style.background = '';
         btn.style.color = '';
-      }, 5000);
-    }, 700);
-  }
+      }
+    }, 5000);
+  }, 400);
 };
 
 /* ==========================================================================
